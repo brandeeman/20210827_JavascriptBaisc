@@ -1,0 +1,33 @@
+<!-- for in 배열 값 읽는 법 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var brands = ["애플", "구글", "페이스북", "아마존", "삼성"];
+
+        //for in 배열에서 index를 추출한다.
+        for (var index in brands) {
+            console.log(brands[index]); //index를 넣으면 value 값을 읽는다.
+        }
+
+        //비교
+
+        for (var i = 0; i < brands.length; i++) {
+            console.log(brands[i]);
+        }
+
+        //비교
+
+        for (var brand of brands) {
+            console.log(brand);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!-- Map 객체 : 어떤 데이터도 키 값이 가능한 객체-->
+<!-- -설명 -->
+<!-- set 초기값 설정. get 오브젝트에서 가져와라. has 있냐? -->
+<!-- 오브젝트와의 차이점 : 오브젝트는 '키 값'이 문자열 데이터만 저장 가능하다. -->
+<!-- Map은 key 값으로 오브젝트도 넣고, 배열도 넣을 수 있다. -->
+
+<!-- Map 객체 장점 : 사이즈로 몇 개의 데이터가 저장되어 있는지 알 수 있다. -->
+<!-- 오브젝트는 읽을 때 순서를 보장하지 않을 수도 있지만 Map 객체는 순서를 보장한다. -->
+
+<!-- 데이터를 넣을 때 : set -->
+<!-- 데이터를 가져올 때 : get -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/4.js/2.user_data.js"></script>
+    <script>
+        //오브젝트
+        for (const key in userList) {
+            // console.log(key);
+        }
+    </script>
+    <script>
+        //순서
+        // var myMap = new Map();
+        // myMap.set("female", 1); //set이라는 함수를 통해 '키'와 '값'을 넣어준다. 
+        // console.log(myMap.get("female"));
+        // myMap.has("female"); //키가 있는? 물어보는 것
+
+        // Map은 key 값으로 오브젝트도 넣고, 배열도 넣을 수 있다.
+        // var key1 = {
+        //     "keyname": 2
+        // };
+        // var key2 = [2, 3, 4, 5];
+
+
+        //
+
+        var myMap = new Map();
+
+        for (var user of userList) {
+            if (myMap.has(user.gender)) {
+                //has : 값이 존재하나 체크 - 불러온 user.gender의 값과 myMap에 있는 키 값이 같은지. 존재하는 지 체크 : 처음에 Map은 빈 공간.
+
+                myMap.set(user.gender, myMap.get(user.gender) + 1); //최초의 1이 들어가는 것 + 1
+
+            } else {
+                //처음에는 여기부터 읽는다. 
+                myMap.set(user.gender, 1);
+
+                // console.log(myMap);
+                //표시 : 키 값 : female => 벨류 값 : 1
+            }
+        }
+
+        console.log(myMap.keys()); //Map 키 값 보여준다.
+        console.log(myMap.values()); //Map 최종 values 값을 보여준다. 
+        console.log(myMap.delete("female")); //특정 값만 삭제
+        console.log(myMap.clear()); //전체적인 클리어 : 배열 초기화
+
+        // myMap.forEach(function (value, key) {
+        //     console.log(key, value);
+        // });
+    </script>
+</body>
+
+</html>

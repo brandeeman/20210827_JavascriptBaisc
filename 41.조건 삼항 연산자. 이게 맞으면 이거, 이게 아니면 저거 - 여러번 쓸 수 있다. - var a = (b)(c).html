@@ -1,0 +1,24 @@
+<!-- 조건 삼항 연산자. 이게 맞으면 이거, 이게 아니면 저거 - 여러번 쓸 수 있다. : var a = (b)?(c)-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var age = 19;
+        var isAdult = (age >= 19) ? true : false;
+
+        console.log(isAdult);
+
+        var time = 8;
+        var greeting = (time <= 10) ? "Good morning!" : (time <= 16) ? "Good afternoon!" : (time <= 20) ?
+            "Good evening" : "Good night!";
+        console.log(greeting);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!-- 에러 안 나게 함수의 파라미터 기본 값 설정 하는 법 : Default Function Parameter -->
+<!-- Default Function Parameter - 함수의 파라미터 기본 값 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function say(message) {
+            console.log(message);
+        }
+
+        say("함수 호출 - 메시지");
+
+        say(); //undefined
+
+        //
+
+        function add(x1, x2) {
+            if (x1 != undefined && x2 != undefined) {}
+            return x1 + x2;
+        }
+
+        console.log(add(5)); //NaN
+
+        //
+
+        function say(message = "파라미터가 안들어왔네요") {
+            //위에처럼 default가 발생시 message를 띄우게 한다.
+            console.log(message);
+        }
+
+        say("파라미터 전달");
+        say(); //파라미터를 설정 못하면 이렇게 default값이 들어가도록 한다. 
+
+        //
+
+        function add(x1 = 1, x2 = 1) {
+            //파라미터 각 각에 1의 값을 대입해 놓는다.
+            return x1 + x2;
+        }
+
+        console.log(add(5));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/4.js/2.user_data.js"></script>
+    <script>
+        var oUser = {}; //object 형성
+        // oUser 현재 상태
+        // oUser = {
+        //     "female" : ""
+        // }
+
+        console.log(oUser["female"]);
+        //현재 female 값은 비어있다. undefined
+
+        for (var user of userList) {
+            if (oUser[user.gender]) {
+                //oUser배열에 undefined. 즉 false이기에 첫 번째는 넘어간다.
+                //세번째부터 여기서 추가되어 간다. 
+
+                oUser[user.gender] += 1;
+
+            } else {
+                oUser[user.gender] = 1;
+                //처음 여기를 먼저 읽는다. 
+
+                // oUser["female"] =1;
+
+                // oUser 현재 상태
+                // oUser = {
+                //     "female" : 1, //첫 번째 읽을 때 추가
+                //      "male" : 1 //두 번째 읽을 때 추가
+                // }
+            }
+        }
+
+        console.table(oUser);
+    </script>
+</body>
+
+</html>

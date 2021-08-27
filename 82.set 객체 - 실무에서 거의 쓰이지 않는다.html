@@ -1,0 +1,71 @@
+<!-- set 객체(배열) : 오브젝트와 차이점은 같은 값이 추가되지 않는다. 유일한 값만 보장한다. -->
+<!-- 배열과의 차이점 : 똑같은 값을 추가할 수 없고, 무조건 유일한 값이어야 한다. -->
+<!-- 실무에서 쓸 일이 거의 없다. -->
+<!-- Has : 있냐? set : (초기값) 설정. get : 배열에서 가져온다.  -->
+<!-- set 배열에서 끝에 추가하는 함수 : push가 아닌 add를 쓴다. -->
+<!-- set 배열 속의 값 사라지게 하는 함수 : delete  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="4.js/2.user_data.js"></script>
+    <script>
+        var arr = []; //같은 말 : var arr = new Array();
+        arr.push(1);
+        arr.push(3);
+
+        var mySet = new Set(); //set 객체는 약식이 없어서 이렇게 정석대로만 써야 한다.
+        mySet.add(1);
+        mySet.add(3);
+        mySet.add(12);
+        mySet.add(3); //기존의 3이 있는데, 또 추가하려고 하면 3이 안 들어간다. //동일한 값은 자동으로 add를 하지 않는다. 
+        mySet.has(3); //3이 들어있는지 true false 로 리턴해준다.
+
+        console.log(mySet.has(3)); //ture
+
+        mySet.delete(3); // 3값을 같는 애가 사라진다.
+
+        console.log(mySet.has(3)); //false
+
+        //
+
+        //set이 쓰이기 전에 object가 쓰였다. 위의 set과 같은 말
+
+        var oUser = {};
+
+        // oUser 현재 상태
+        // oUser = {
+        //     "female" : ""
+        // }
+
+        console.log(oUser["female"]);
+        //현재 female 값은 비어있다.
+
+        for (var user of userList) {
+            if (oUser[user.gender]) {
+                //세번째 읽을 때 시작 // 첫번째는 값이 없어서 실행되지 않는다. 
+                oUser[user.gender] += 1;
+
+            } else {
+                //처음에는 여기를 먼저 읽는다. 
+                oUser[user.gender] = 1;
+
+                // oUser["female"] =1;
+
+                // oUser 현재 상태
+                // oUser = {
+                //     "female" : 1, //첫 번째 읽을 때 추가
+                //      "male" : 1 //두 번째 읽을 때 추가
+                // }
+            }
+        }
+        console.table(oUser);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!-- select 선택 박스를 자바스크립트로 만드는 법 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 100%
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="sel_gender">
+        <!-- select : 선택 박스를 만든다. -->
+        <!-- <option value="male">남자</option> -->
+        <!-- <option value="female">여자</option> -->
+    </select>
+
+    <button onclick="doSearch();">조회</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>성별</th>
+                <th>회사</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+        </tbody>
+    </table>
+
+    <script src="/4.js/2.user_data.js"></script>
+
+    <script>
+        //배열 안의 오브젝트
+        var genderOption = [{
+                v: "male",
+                t: "남자"
+            },
+            {
+                v: "female",
+                t: "여자"
+            },
+        ];
+        var selH = [];
+        for (var gender of genderOption) {
+            // selH.push('<option value="' + gender.v + '">' + gender.t + '</option>');
+            // console.log(gender.v);
+            selH.push(`<option value="${gender.v}">${gender.t}</option>`);
+        }
+
+        //위에 for 문과 같은 표현
+        // selH.push('<option value = "male">남자</option>');
+        // selH.push('<option value = "male">여자</option>');
+
+        document.getElementById("sel_gender").innerHTML = selH.join("");
+
+        // <!-- <option value="male">남자</option> -->
+        // <!-- <option value="female">여자</option> -->
+
+        //위에 table도 마찬가지 : 이 내용이 반복되어야 한다. 
+        // <td></td>
+        // <td></td>
+        // <td></td>
+
+        function doSearch() {
+            var gender = document.getElementById("sel_gender").value;
+            var h = [];
+            for (var user of userList) {
+                if (gender == user.gender) {
+                    h.push('<tr>');
+                    h.push('<td>' + user.name + '</td>');
+                    h.push('<td>' + user.gender + '</td>');
+                    h.push('<td>' + user.company + '</td>');
+                    h.push('</tr>');
+                }
+
+            }
+
+            // console.log(h.join(""));
+
+            document.getElementById("tb").innerHTML = h.join("");
+        }
+    </script>
+</body>
+
+</html>

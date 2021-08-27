@@ -1,0 +1,79 @@
+<!-- 이벤트 - id2를 통해 '버튼' 연결 -->
+
+<!-- id는 하나의 값만 가진다. -->
+<!-- id만 있을 때 : 협업할 때 디자이너가 쉽게 볼 수 있다. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- onchange - 국가 선택 - 바뀜 -->
+    <select name="" id="" onchange="selectCountry(this);">
+        <option value="">국가를 선택하세요.</option>
+        <option value="ko">대한민국</option>
+        <option value="jp">일본</option>
+    </select>
+
+    <!-- 도시 선택 : id 선택 -->
+    <select name="" id="sel_city"></select>
+
+    <script>
+        // 도시 배열
+        var cities = [{
+                //countryCode - 국가 value - ko와 연결
+                countryCode: "ko",
+                cityCode: "02",
+                cityName: "서울"
+            },
+            {
+                countryCode: "ko",
+                cityCode: "064",
+                cityName: "제주"
+            },
+            {
+                countryCode: "jp",
+                cityCode: "11",
+                cityName: "도쿄"
+            }
+        ];
+
+        var oCity = {};
+
+        // 이 코드는 왜 있지?
+        for (var city of cities) {
+            if (!oCity[city.countryCode]) {
+                oCity[city.countryCode] = [];
+            }
+
+            oCity[city.countryCode].push(city);
+        }
+
+        console.log(oCity);
+
+        // 선택한 국가 인자 들어옴 
+        function selectCountry(ele) {
+            console.log(ele.value);
+
+            var h = [];
+            if (ele.value != "") {
+                console.log(oCity[ele.value]);
+                for (var city of oCity[ele.value]) {
+                    h.push(`<option value="${city.cityCode}">${city.cityName}</option>`);
+                }
+            }
+
+            console.log(h.join(""));
+
+            // 도시를 선택하면 실행
+            document.getElementById("sel_city").innerHTML = h.join("");
+        }
+    </script>
+</body>
+
+</html>

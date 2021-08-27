@@ -1,0 +1,29 @@
+<!-- console.log에 배열 적는 법 : console.log(a([0]); -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 40,
+            tel: "010203030303",
+            email: "aaa@mail.com"
+        };
+
+        let cars = [3, "현대자동차", person, "기아"];
+
+        console.log(cars[0]); //배열 읽는 법
+
+        cars[0] = "아우디";
+        console.log(cars[0]);
+    </script>
+</body>
+
+</html>

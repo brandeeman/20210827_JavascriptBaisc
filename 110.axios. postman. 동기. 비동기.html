@@ -1,0 +1,47 @@
+<!-- 비동기 방식1 : promise 방식 // then : 앞에 것 완료 후 그러면 -->
+<!-- 목적 -->
+<!-- 달라 : http request : 클라이언트가 서버에게 요청 -->
+<!-- 요청해줌 : http response -->
+<!-- 예전에는 하나하나만 가능했다. 느림 -->
+<!-- 새로나옴 : ajax : 비동기 방식 -에러가 많다. -> 기다려주게 만들어야 한다. 에러 안 나게 -->
+
+<!-- 동기. 비동기 강의(분산화) : https://www.youtube.com/watch?v=zRJOte7TaPw -->
+<!-- 동기(sync) : 작업이 끝날 때까지 기다린다. -->
+<!-- 비동기(Async) : 기다리지 않는다. 즉시 리턴. 여러 쓰레드에서 여러 작업을 할 수 있게 한다. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        //const url = "https://139bf357-e04d-4360-86ec-5a027ce6cbae.mock.pstmn.io/getUserList";
+        //const url = "https://139bf357-e04d-4360-86ec-5a027ce6cbae.mock.pstmn.io/getDrinkList";
+
+        const url = "https://139bf357-e04d-4360-86ec-5a027ce6cbae.mock.pstmn.io/getData";
+
+        //var data = axios.get(url);
+        //console.log(data);
+
+        //promise 방식은 이렇게 쓴다라고 알기. 라이브러리 문법이기에 그냥 외우기. 복사. 붙여넣기.
+        function getData() {
+            return new Promise(function (resolve, reject) {
+                axios.get(url).then(function (response) { //then : 앞에 것 완료 후 그러면
+                    resolve(response.data);
+                });
+            });
+        }
+
+        getData().then(function (jsonData) {
+            console.log(jsonData);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!-- 동일한 변수 에러나서 재선언 못하게 하는 법 : let a -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = 5;
+        let y = 7;
+        let z = x + y;
+
+        console.log("x", x);
+        console.log("y", y);
+        console.log("z", z);
+
+        x = 7;
+        let x = 7; //에러 발생
+    </script>
+</body>
+
+</html>

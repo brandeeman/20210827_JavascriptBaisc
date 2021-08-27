@@ -1,0 +1,61 @@
+<!-- this의 여러가지 용도 -->
+<!-- this : 어떤 경우에 쓰느냐에 따라 다른 this가 된다. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="doSearch(this);">조회</button>
+    <!-- 버튼에서의 this는 버튼 자체의 요소가 된다. -->
+    <!-- button은 click이라는 이벤트를 받을 수 있다. : onclick -->
+    <!-- 이벤트 앞에는 on을 붙인다. -->
+
+    <select name="" id="" onchange="doChange(this);">
+        <option value="1">A</option>
+        <option value="2">B</option>
+        <option value="3">C</option>
+        <option value="4">D</option>
+    </select>
+
+    <script>
+        console.log(this);
+        // script 태그에서 바로 쓰면 '윈도우 객체'가 된다. 
+
+        function myFunction() {
+            console.log(this);
+            //함수에서 쓰면 '윈도우 객체'가 된다.
+        }
+
+        myFunction();
+
+        //Html DOM요소에서 이벤트가 수행이 될때 호출하는 함수에 this를 파라미터 값으로 전달하면, 
+        //이때 this는 이벤트가 일어나는 HTML, DOM 요소 그 자체를 의미
+
+        function doSearch(obj) {
+            console.log(obj);
+        }
+
+
+        function doChange(obj) {
+            console.log(obj);
+            console.log(obj.value);
+        }
+
+        //세번째
+        //오브젝트 안에서의 this. 오브젝트 전체를 의미
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            getFullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+    </script>
+</body>
+
+</html>

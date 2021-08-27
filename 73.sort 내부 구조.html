@@ -1,0 +1,30 @@
+<!-- sort 내부 구조. sort 사용법 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="userList"></script>
+    <script>
+        var points = [34, 12, 45, 22, 6, 8, 2, 54];
+
+        function sort(func) {
+            var len = points.length;
+            for (var i = 0; i < len; i++) {
+                if (func(position[i], points[i + 1])) {
+                    points.slice(i, i + 1)
+                }
+            }
+        }
+
+        sort(function (a, b) {
+            return b - a
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!-- Mock 서버. 테스트를 위한 가짜 서버 구축해주는 프로그램 : postman -->
+<!-- 구글 검색 : postman -->
+<!-- 목적 : 프론트 개발자가 자기가 개발하는 것을 하기 위해서 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        //console -> GET에서 가져오기
+        const url = "https://139bf357-e04d-4360-86ec-5a027ce6cbae.mock.pstmn.io/getUserList";
+        //const url = "https://139bf357-e04d-4360-86ec-5a027ce6cbae.mock.pstmn.io/getDrinkList";
+
+        var data = axios.get(url);
+        console.log(data);
+    </script>
+</body>
+
+</html>

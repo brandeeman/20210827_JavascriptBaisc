@@ -1,0 +1,21 @@
+<!-- object.js 파일 불러와서 filter 함수 쓰는 법 : user.gender == "male" && user.age == 30 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/4.js/2.user_data.js"></script>
+    <script>
+        var output = userList.filter(function (user) {
+            return user.gender == "male" && user.age == 30;
+        });
+
+        console.table(output);
+    </script>
+</body>
+
+</html>

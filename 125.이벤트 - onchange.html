@@ -1,0 +1,27 @@
+<!-- onchange 이벤트 : select가 변하면 작동하는 이벤트 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- onchange 이벤트로 함수를 호출한다. -->
+    <select name="" id="" onchange="selectCity();">
+        <option value="서울">서울</option>
+        <option value="제주">제주</option>
+        <option value="부산">부산</option>
+        <option value="대전">대전</option>
+        <option value="포항">포항</option>
+    </select>
+
+    <script>
+        function selectCity() {
+            console.log("이벤트 onclick를 통해서 발생");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!-- Windows 객체들 : 이벤트 -->
+<!-- html 연결 : 이벤트 -->
+<!-- 참고 사이트 : https://kunsae.tistory.com/44 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="deleteItem()">삭제</button>
+
+    <a href="https://naver.com" target="_blank"> Naver </a>
+
+    <script>
+        //alert 창 함수. 전역객체, Global 객체 라고 한다.
+        // window.alert("이것은 alert창입니다.");
+        //alert("이거은 alert창입니다.");
+
+        //사용자에게 의사를 물어보는 함수 : confirm
+        //confirm("정말 삭제하시겠습니까?"))
+
+        // function deleteItem() {
+        // if (confirm("정말 삭제하시겠습니까?")) {
+        // //삭제 로직
+        // } else
+        // }
+
+        // var pass = prompt("비밀번호를 입력하세요.");
+        // console.log(pass);
+        // if (pass == null) {
+        // //사용자가 취소 버튼을 누른 경우
+        // } else if (pass == "") {
+
+        // } else if (pass != "") {
+        // console.log(pass);
+        // }
+
+        // window.open("https://naver.com");
+
+        //setTimeout()    
+
+        // setTimeout(function () {
+        //     alert("프로그램 실행");
+        // }, 2000); //2초 후에 실행하라.
+
+        // setInterval(function () {
+        //     console.log("프로그램 실행");
+        // }, 1000); //1초마다 계속 실행된다.
+
+        var count = 0;
+
+        var fnc = setInterval(function () {
+            if (count < 5) {
+                console.log("프로그램 실행:" + count);
+                count++;
+            } else {
+                console.log("종료");
+                clearInterval(fnc);
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!-- 다시 -->
+<!-- html과 자바스크립트 연결하는 법 : getEelementById -->
+<!-- id값은 유일해야 한다. -->
+<!-- . 한 다음 이름으로 접근하면 다 값을 가져온다. -->
+<!-- value 값이란? -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="text1"><br>
+    <input type="text" name="" id="text2"><br>
+    <button onclick="myFunction1();">조회</button>
+
+    <script>
+        function myFunction1() {
+            //document : DOM에 접근하겠다.
+            var ele = document.getElementById("txt1");
+            console.log(ele);
+
+            var txt1Value = ele.value;
+            console.log(txt1Value);
+        }
+    </script>
+
+    <!-- 배열로 보여준다. 태그를 이용하는 방법 -->
+
+    <p>ABC</p>
+    <p>DEF</p>
+
+    <button onclick="myFunction2();">조회</button>
+
+    <script>
+        function myFunction2() {
+            //document : DOM에 접근하겠다.
+            var ele = document.getElementById("txt1");
+            console.log(ele);
+        }
+    </script>
+
+    <!-- name을 이용하는 방법-->
+
+    <h2>당신이 관심있어 하는 프로그래밍 언어는?</h2>
+    <label for="">
+        <input type="checkbox" name="chk_interest" id="" value="js">
+        자바스크립트</label>
+    <label for="">
+        <input type="checkbox" name="chk_interest" id="" value="js">
+        자바스크립트</label>
+    <label for="">
+        <input type="checkbox" name="chk_interest" id="" value="js">
+        자바스크립트</label>
+    <label for="">
+        <input type="checkbox" name="chk_interest" id="" value="js">
+        자바스크립트</label>
+
+    <div style="margin-top:20px">
+        <button onclick="myFunction();">조회</button>
+    </div>
+
+    <script>
+        function myFunction() {
+            var chks = document.getElementsByName("chk_interest");
+            console.log(chks);
+        }
+    </script>
+
+
+    </label>
+
+</body>
+
+</html>

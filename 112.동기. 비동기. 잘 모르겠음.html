@@ -1,0 +1,54 @@
+<!-- 비동기 방식3 : fetch -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        const url = "https://139bf357-e04d-4360-86ec-5a027ce6cbae.mock.pstmn.io"; //url을 줄이고 밑에 넣어준다.
+
+        //aysnc : 비동기 방식으로 처리한다는 것을 의미
+        async function api(url) { //url만 제대로 입력하고 api만 받으면 된다. 
+            return (await axios.get(url)).data; //데이터를 받아온다. //json에 data로 잡아놨다.
+        }
+
+        async function getData(path) {
+            var data = (await api(url +
+                path)); //await 기다린다. - async가 존재해야 await를 쓸 수 있다. : 규약 : async - await 한 쌍이다.
+            console.log(path.data);
+        }
+
+        async function getUserList() {
+            var data = (await api(url + path));
+            console.log(path, data);
+        }
+
+        async function getDrinkList() {
+            var data = (await api(url + "getDrinkList"));
+            console.log(data);
+        }
+
+        getData("getUserList");
+        getData("getDrinkList");
+
+        //fetch()
+
+        fetch(url + "getUserList").then(function (response) {
+            // 받아오고 나면 response로 들어간다.
+            return response.json();
+            // json 형태로 바뀐다. 그렇데 시간이 걸린다.
+        }).then(function (data) {
+            // 시간이 걸리고 바뀌고 나면 (then) console.log를 찍어준다. 
+            console.log(data);
+        });
+    </script>
+</body>
+
+</html>

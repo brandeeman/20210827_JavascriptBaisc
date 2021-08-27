@@ -1,0 +1,57 @@
+<!-- 선생님의 요일 추출 응용 : 배열 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var d = new Date(); //현재 시간을 알려준다.
+        var day = d.getDay(); //현재 날짜를 알려준다.
+
+        console.log("d", d);
+        console.log("day", day);
+
+        var dayName = "";
+
+        console.log("dayName", typeof (dayName));
+
+        // 특정값이 정해져 있을 때. 그 특정 값을 비교할 때 switch문을 쓴다.
+        switch (day) {
+            case 0:
+                dayName = "일요일";
+                break;
+            case 1:
+                dayName = "월요일";
+                break;
+            case 2:
+                dayName = "화요일";
+                break;
+            case 3:
+                dayName = "수요일";
+                break;
+            case 4:
+                dayName = "목요일";
+                break;
+            case 5:
+                dayName = "금요일";
+                break;
+            case 6:
+                dayName = "토요일";
+                break;
+            default:
+                break;
+        }
+
+        console.log("dayName", dayName);
+
+        //응용
+        var dayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+        console.log("dayName", dayNames[day]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!-- 선생님 : 가위, 바위, 보 게임 함수 만드는 법1 -->
+
+<!-- 함수명 - rspPlayer -->
+<!-- 파라미터 1개 - "가위", "바위", "보" -->
+<!-- const arrRsp = ["가위", "바위", "보"] -->
+<!-- random 함수를 써서 0~2까지 정수를 무작위로 나오게 해서 -->
+<!-- 이것을 arrRsp 배열에 인덱스번호 넣으면 -->
+<!-- return - 오브젝트 타입 - {userRs:"", playerRsp:"", winnder:이기면 1, 지면 -1, 무승부면 0} -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function rspPlayer(rsp) {
+            var a = new Map();
+
+
+            var arrRsp = [];
+            arrRsp.push(getRandomInteger(0, 2));
+
+            if (arrRsp = 0) {
+
+            } else if (arrRsp = 1) {
+
+            } else {
+
+            }
+
+
+            return arrRsp
+        }
+
+        console.log(rspPlayer(1));
+    </script>
+</body>
+
+</html>

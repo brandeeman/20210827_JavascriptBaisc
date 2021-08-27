@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/4.js/2.user_data.js"></script>
+    <script>
+        function getAgeGroup() {
+            let userAgeGroup = new Map();
+
+            for (user of userList) {
+                //첫번째 들어오는 age 숫자 : "25"
+
+                var ageGroup = user.age.toString().charAt(0) + "0";
+                //첫글자 2를 읽음 // key 값 : "2" + "0" = "20"
+
+                if (userAgeGroup.has(ageGroup)) {
+                    //"20" : 이런 키값이 있냐? 없으면 else로 이동. 처음에는 없다. 비어있기 때문이다.
+
+                    userAgeGroup.set(ageGroup, userAgeGroup.get(ageGroup) + 1); //get(ageGroup) : 값 : 1
+                } else {
+                    //0인덱스 //userAgeGroup.set("20",1);
+                    userAgeGroup.set(ageGroup, 1); //초기값 셋팅
+                    //값이 존재하게 된다. 
+                }
+            }
+            return userAgeGroup;
+        }
+
+        console.log(getAgeGroup());
+
+
+        //get, set을 쓰면 조금 더 프로그램적으로 보인다. 
+
+        //
+
+        //오브젝트로 쓰는 법
+        function getAgeGroup() {
+            let userAgeGroup = new Map();
+
+            for (user of userList) {
+                //첫번째 "25"
+
+                var ageGroup = user.age.toString().charAt(0) + "0";
+                //첫글자 2를 읽어옴 // key 값 : "20"
+
+                if (userAgeGroup[ageGroup]) {
+                    //"20" : 이런 키값이 있냐? 없으면 else로 이동. 처음에는 없다.
+
+                    userAgeGroup[ageGroup] = userAgeGroup[ageGroup] + 1;
+                } else {
+                    //0인덱스 //userAgeGroup.set("20",1);
+                    userAgeGroup[ageGroup] = 1; //초기값 셋팅
+                }
+            }
+            return userAgeGroup;
+        }
+
+        console.log(getAgeGroup());
+    </script>
+</body>
+
+</html>

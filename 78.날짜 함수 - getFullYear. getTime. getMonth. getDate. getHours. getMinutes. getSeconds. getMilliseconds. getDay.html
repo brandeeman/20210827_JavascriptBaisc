@@ -1,0 +1,71 @@
+<!-- 날짜 함수들 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //현재 년을 불러오는 함수 : getFullYear()
+        var e = new Date(2021, 5, 24, 13, 23, 12, 000);
+        //객체를 불러오는 법
+        console.log(e.getFullYear());
+
+        //대한민국 표준시를 불러오는 함수 : getTime()
+        var e = new Date(e.getTime());
+        console.log(e);
+
+        const d = new Date(); //밀리 세컨드로 나온다.
+
+        console.log(d.getTime())
+
+        //현재 pc에 있는 시간이 출력 하는 법
+        //const d = new Date();
+        //new 생성자
+        //Date() 내부 함수
+        console.log(d);
+
+        //현재 연도만 가져오는 함수 : getFullYear
+        var year = d.getFullYear();
+        console.log("year", year);
+
+        //현재 달을 가져오는 함수 : getMonth(한달 전 것이 들어온다.)
+        var month = d.getMonth();
+        console.log("month", month) + 1;
+
+        //if (month < 10) month = "0" + month;
+
+        const monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+        console.log(monthName[month]);
+
+        //현재 날짜를 가져오는 함수 : getDate
+        var date = d.getDate();
+        console.log("date", date);
+
+        //현재 시간을 가져오는 함수 : getHours
+        var hour = d.getHours();
+        console.log("hour", hour);
+
+        //현재 분을 가져오는 함수 : getMinutes
+        var minute = d.getMinutes();
+        console.log("minute", minute);
+
+        //현재 초를 가져오는 함수 : getSeconds
+        var second = d.getSeconds();
+        console.log("second", second);
+
+        //현재 Milliseconds를 가져오는 함수 : getMilliseconds
+        var milliseconds = d.getMilliseconds();
+        console.log("milliseconds", milliseconds);
+
+        //현재 요일을 index로 가져오는 함수 : getDay
+        var dayNameIndex = d.getDay();
+        //0 - 일요일, 1 - 월요일 2 - 화요일 3 - 수요일 4 - 목요일 5 - 금요일 6 - 토요일
+        console.log(d.getDay());
+    </script>
+</body>
+
+</html>

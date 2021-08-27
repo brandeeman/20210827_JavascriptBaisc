@@ -1,0 +1,29 @@
+<!-- object에 어떤 키가 있는 지 모를 때 '키'와 '값'을 다 읽는 법 : for ~ in -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 40,
+            tel: "010203030303",
+            email: "aaa@mail.com"
+        };
+
+        for (var key in person) {
+            //person이란 object 안에 있는 key 값을 반복해서 하나하나 읽어준다.
+
+            console.log("key", key); //key 값을 읽어온다.
+            console.log("value", person[key]); // value 값을 읽어온다.
+        }
+    </script>
+</body>
+
+</html>

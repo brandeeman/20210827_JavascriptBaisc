@@ -1,0 +1,50 @@
+<!-- 문자열(string) 내장 함수들2 -->
+<!-- 인덱스 문자 하나만 가져오는 함수 : charAt() -->
+<!-- charCodeAt() : 고유 함수에 담겨있는 캐릭터 숫자를 가져옴. 거의 안씀. -->
+<!-- "어떠한 기준(예시 : ("-"))으로 나눠 배열로 들어가는 함수 : split() -->
+<!-- 배열을 문장열로 바꾸는 함수 : join -->
+<!-- 시작에 이 문자열이 포함되었는지 확인하는 함수 : startsWith() -->
+<!-- 마지막에 이 문자열이 포함되었는지 확인하는 함수 : endsWith() -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //인덱스 문자 하나만 가져오는 함수 : charAt()
+        var txt = "Hello World";
+        console.log(txt.charAt(0));
+
+        //charCodeAt() : 고유 함수에 담겨있는 캐릭터 숫자를 가져옴. 거의 안씀.
+        console.log(txt.charCodeAt(0));
+
+        //"어떠한 기준(예시 : ("-"))으로 나눠 배열로 들어가는 함수 : split()
+        //쪼갠 값을 배열에 담아서 return
+        //2021-06-25
+        var date = "2021-06-25";
+        var arr = date.split("-");
+        console.table(arr);
+
+        var tag = "#서울#양평#한경닷컴#개발자품격#잘한다";
+        console.table(tag.split("#"));
+
+        //배열을 문장열로 바꾸는 함수 : join
+        console.log(arr.join(""));
+        console.log(arr.join("."));
+
+        //시작에 이 문자열이 포함되었는지 확인하는 함수 : startsWith()
+        var url = "http://naver.com";
+
+        if (url.startsWith("http://")) {}
+
+        //마지막에 이 문자열이 포함되었는지 확인하는 함수 : endsWith()
+        var imageFile = "logo.jpg";
+        if (imageFile.endsWith(".jpg")) {}
+    </script>
+</body>
+
+</html>

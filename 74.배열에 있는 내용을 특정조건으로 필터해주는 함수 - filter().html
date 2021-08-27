@@ -1,0 +1,48 @@
+<!-- 배열에 있는 내용을 특정조건으로 필터해주는 함수 : filter()  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //배열에 있는 내용을 특정조건으로 필터해주는 함수 : filter()
+        var points = [34, 12, 45, 22, 6, 8, 2, 54];
+
+        var output = points.filter(function output(p) {
+            //파라미터는 하나만 가진다.
+            return p > 20; //20보다 큰 조건만 적용한다.(조건만족하는 것만) - ture, false로 들어온다.
+        });
+
+        console.table(output);
+
+        //동작원리1
+        // function filter() {
+        //     var outputList = [];
+
+        //     for (var p of points) {
+        //         if (p > 20) {
+        //             outputList.push(p);
+        //         }
+        //     }
+
+        //     return outputList;
+        // }
+
+        // 동작원리2 = 동작원리1 이랑 같다.
+        // function filter(arr, func) {
+        //     var output = [];
+        //     for (var a of arr) {
+        //         if (func(a)) {
+        //             output.push(a);
+        //         }
+        //     }
+        //     return output;
+        // }
+    </script>
+</body>
+
+</html>

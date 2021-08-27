@@ -1,0 +1,49 @@
+<!-- 배열 안의 오브젝트를 새로운 구조의 오브젝트로 만드는 함수 : map() -->
+<!-- -참고 -->
+<!-- 배열이 오브젝트일때만 가능하다. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //map()
+        var userList = [{
+                firstName: "재석",
+                lastName: "유",
+                email: "yu@gmail.com"
+            },
+            {
+                firstName: "종국",
+                lastName: "김",
+                email: "kim@gmail.com"
+            },
+            {
+                firstName: "세찬",
+                lastName: "양",
+                email: "yang@gmail.com"
+            },
+            {
+                firstName: "석진",
+                lastName: "지",
+                email: "ji@gmail.com"
+            }
+        ];
+
+        userList.map(function (user) {
+            return {
+                "firstName": user.firstName,
+                "lastName": user.lastName,
+                "email": user.email,
+                "fullName": user.firstName + user.lastName
+            }
+        });
+    </script>
+</body>
+
+</html>

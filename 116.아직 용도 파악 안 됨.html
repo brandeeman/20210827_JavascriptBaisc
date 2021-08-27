@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="margin-top: 20px;">
+        <button onclick="myFunction(event);" id="btnSave" style="padding:10px">저장</button>
+    </div>
+    <!-- this -->
+
+    <script>
+        function myFunction(btnEle) {
+            //var btnEle = document.querySelector("#btnSave").disabled = true;
+            //btnEle.disabled = true;
+
+            var btnEle = e.target;
+            console.log(e);
+
+            setTimeout(function () {
+                document.querySelector("#btnSave").disabled = false;
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

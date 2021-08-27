@@ -1,0 +1,40 @@
+<!-- 조건을 만족하는 동안 계속 실행시키는 법 : while // 예시 - 코인 자판기 -->
+<!-- for문과의 차이 : for문은 거의 다 '배열 같은(데이터 여러개) 것으로 쓴다. -->
+<!-- while문은 특정 조건을 쓸 때 쓴다. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let i = 1;
+        while (1 <= 10) {
+            console.log(i);
+            i++;
+        }
+
+        // 예시1
+        var inputPrice = 10000;
+        var coinUnit = 500;
+        while (inputPrice > 0) {
+            inputPrice = inputPrice - coinUnit;
+        }
+
+        //예시2 : 코인 자판기
+        var inputPrice = 10000;
+        var coinUnit = 500;
+        var coinCount = 0;
+        while (inputPrice > 0) {
+            inputPrice = inputPrice - coinUnit;
+            coinCount++
+        }
+
+        console.log(coinCount);
+    </script>
+</body>
+
+</html>

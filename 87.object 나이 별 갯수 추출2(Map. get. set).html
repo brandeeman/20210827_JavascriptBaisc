@@ -1,0 +1,47 @@
+<!-- 다시 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/4.js/2.user_data.js"></script>
+    <script>
+        //오브젝트로 쓰는 법
+        function getAgeGroup(users, keyAge) {
+            //두번째 : 나이에 해당하는 키 이름
+            let userAgeGroup = {};
+
+            for (var user of userList) {
+
+                var ageGroup = "";
+
+                if (user.age < 10) {
+                    //10살 이하일 경우
+                    ageGroup = "0"; //0의 값을 넣는다. 
+                } else if (user.age >= 100) { //100살 이상일 경우
+                    ageGroup = user.age.toString().substr(0, 2) + "0"; //문자열로 바꾼다. ?
+                    110
+                } else if (user.age < 100) { //100살 이하일 경우
+                    ageGroup = user.age.toString().charAt(0) + "0"; //문자열로 바꾼 후 : 0을 붙여준다. //예)25 -> 2 -> 2+0 -> 20
+                }
+
+
+                //카운트 하는 코드(위쪽에 for 문 있음)
+                if (userAgeGroup[ageGroup]) {
+                    userAgeGroup[ageGroup] = userAgeGroup[ageGroup] + 1;
+                } else {
+                    userAgeGroup[ageGroup] = 1; //처음에는 이곳으로
+                }
+            }
+            return userAgeGroup;
+        }
+
+        console.log(getAgeGroup());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!-- JSON 객체란? 데이터 통신 포맷 -->
+<!-- JSON 객체 : JavaScript Object Notation - 데이터를 주고 받는 데이터 형식 포맷 -->
+
+<!-- Json은 다 문자열로 반환시켜서 보낸다. : C, java 등 다 사용가능하게 하기 위해  -->
+<!-- json은 '키 값'에는 무조건 쌍따옴표를 해야 한다.  -->
+
+<!-- JSON이 올바로 작성되었는지 알려주는 사이트 : https://mkil.tistory.com/322 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var productList = {
+            "data": [{
+                    "name": "솔의눈",
+                    "price": 700
+                },
+                {
+                    "name": "커피",
+                    "price": 700
+                },
+                {
+                    "name": "파워레이드",
+                    "price": 1200
+                },
+                {
+                    "name": "오렌지",
+                    "price": 1000
+                },
+                {
+                    "name": "보리차",
+                    "price": 1200
+                },
+                {
+                    "name": "밀키스",
+                    "price": 800
+                }
+            ]
+        }
+
+        // console.log(productList);
+
+        //console.log(JSON.stringify(productList)); 
+        //stringify : 다 문자열로 만든다. -> 문자로 변환한 다음에 서버로 던진다. 문자열로 던져야 상대도 받을 때 좋다.
+        var jsonString = JSON.stringify(productList);
+
+        var jsonObject = JSON.parse(jsonString); //문자열을 object로 바꾼다.
+    </script>
+</body>
+
+</html>

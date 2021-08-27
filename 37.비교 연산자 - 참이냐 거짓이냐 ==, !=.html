@@ -1,0 +1,28 @@
+<!-- 비교 연산자 : 참이냐? 거짓이냐? ==, !=, >, <, === -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = 3;
+        var y = 4;
+        console.log(x == y); //같다. 참이냐? 거짓이냐?
+        console.log(x != y); //같지 않다. 참이냐? 거짓이냐?
+        console.log(x > y);
+        console.log(x >= y);
+        console.log(x < y);
+        console.log(x <= y);
+
+        var x = 3;
+        var y = "3";
+        console.log(x == y); //true가 나온다. 자바스크립트가 너무 사람을 배려한다. 
+        console.log(x === y); //false가 나온다. '데이터타입'까지 정말 같냐는 질문이다.
+    </script>
+</body>
+
+</html>

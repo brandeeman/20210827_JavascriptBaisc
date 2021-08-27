@@ -1,0 +1,29 @@
+<!-- 배열 내용 바꾸는 법 : a[0] = "b" -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 40,
+            tel: "010203030303",
+            email: "aaa@mail.com"
+        };
+
+        let cars = [3, "현대자동차", person, "기아"]
+
+        console.log(cars[0]);
+
+        cars[0] = "아우디"; //배열 내용 바꾸는 법
+        console.log(cars[0]);
+    </script>
+</body>
+
+</html>

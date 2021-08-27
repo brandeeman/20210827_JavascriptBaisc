@@ -1,0 +1,84 @@
+<!-- Math 객체 -->
+<!-- -설명 -->
+<!-- 반올림 처리하는 함수 : round -->
+<!-- 무조건 올림처리해서 정수를 만드는 함수 : ceil -->
+<!-- 무조건 내림 : floor -->
+<!-- 무조건 정수형 부분만 반환. 소수점 이하는 무조건 버림. : trunc -->
+<!-- 양수냐? 음수냐? 0이냐? 아는 함수 : sign -->
+<!-- 제곱을 나타내는 함수 : pow -->
+<!-- 루트값을 나타내는 함수 : sqrt -->
+<!-- 무조건 양수 값으로 만들어주는 함수 : abs -->
+<!-- 제일 작은 값을 찾아서 알려주는 함수 : min -->
+<!-- 제일 큰 값을 찾아서 알려주는 함수 : max -->
+<!-- 매번 실행할 때마다 무작위 숫자가 나오는 함수 : random -->
+<!-- randome이 0에서 9사이 값이 나온다. -->
+<!-- 1 ~ 10까지의 숫자가 나온다 -->
+<!-- 100까지의 숫자가 나온다..  -->
+<!-- 그 사이 숫자 정수형을 돌려주는 함수 : min, max -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //반올림 처리하는 함수 : round
+        console.log(Math.round(4.9));
+        console.log(Math.round(4.2));
+        console.log(Math.round(-4.2));
+
+        //무조건 올림처리해서 정수를 만드는 함수 : ceil
+        console.log(Math.ceil(4.4));
+
+        //무조건 내림 : floor
+        console.log(Math.floor(4.9));
+
+        //무조건 정수형 부분만 반환. 소수점 이하는 무조건 버림. : trunc
+        console.log(Math.trunc(4.9));
+
+        //양수냐? 음수냐? 0이냐? 아는 함수 : sign
+        console.log(Math.sign(-21123)); //-1
+        console.log(Math.sign(0)); //0
+        console.log(Math.sign(123)); //1
+
+        //제곱을 나타내는 함수 : pow
+        console.log(Math.pow(8, 2));
+
+        //루트값을 나타내는 함수 : sqrt
+        console.log(Math.sqrt(64));
+
+        //무조건 양수 값으로 만들어주는 함수 : abs
+        console.log(Math.abs(-4.7));
+
+        //제일 작은 값을 찾아서 알려주는 함수 : min
+        console.log(Math.min(0, 23, 12, 45, 33, 5533));
+
+        //제일 큰 값을 찾아서 알려주는 함수 : max
+        console.log(Math.max(0, 23, 12, 45, 33, 5533));
+
+        //매번 실행할 때마다 무작위 숫자가 나오는 함수 : random
+        // 0보다 크고, 1보다 작은 수가 나온다. 
+        console.log(Math.random());
+
+        //randome이 0에서 9사이 값이 나온다. 
+        console.log(Math.floor(Math.random() * 10));
+
+        //1 ~ 10까지의 숫자가 나온다. 
+        console.log(Math.floor(Math.random() * 10) + 1);
+
+        //100까지의 숫자가 나온다. 
+        console.log(Math.floor(Math.random() * 100) + 1);
+
+        //그 사이 숫자 정수형을 돌려주는 함수 : min, max
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandomInteger(11, 20));
+    </script>
+</body>
+
+</html>

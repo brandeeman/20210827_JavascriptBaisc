@@ -1,0 +1,570 @@
+001(1).html
+자바 스크립트 : script
+
+001(2).html
+자바 스크립트 : head에 출력하는 법 : script
+
+001(3).html
+자바 스크립트 body에 출력하는 법 : script
+
+001(4).html
+자바스크립트 따로 추출해서 주는 법 : <srcipt src = "001.js"></script>
+
+001(5).html
+자바 스크립트 웹사이트에 출력하는 법 : document.write
+
+001(6).html
+자바 스크립트 내부에 'html 태그' 주는 법
+
+002(1).html
+console 창에 출력하는 법 : console.log
+
+002(2).html
+변수 쓰는 법 : var
+
+002(3).html
+변수 형식들 : 카멜케이스(myAge), 파스칼케이스(MyAge), 스네이크케이스(my_age), 헝가리케이스(strUserName)
+
+003(1).html
+동일한 변수 재선언 가능 : var a
+
+003(2).html
+동일한 변수 에러나서 재선언 못하게 하는 법 : let a
+
+003(3).html
+값을 고정시키는 변수 : const a
+
+004(1).html
+변수에 문자열을 쓰는 법 : 쌍따옴표, 홑따옴표
+
+004(2).html
+문자열 안에 따옴표, 쌍따옴표, 특수 문자 쓰는 법 : \''
+
+004(3).html
+문자열 안에 빗금 넣는 법 : \\
+
+004(4).html
+조건문이란? 맞냐? 틀리냐? 용어 : Boolean
+
+004(5).html
+용어 : undefined이란?
+
+004(6).html
+용어 : null이란?
+
+005(1).html
+용어 : object란? : 2개 object 존재 : (헷갈림)모든 게 다 오브젝트인데 그 오브젝트에 또 오브젝트가 있다. : let a{b:"c",}
+
+005(2).html
+object 나란히 두 개 써도 된다.
+
+005(3).html
+object에 새로운 데이터 추가하는 법 : a.b="c";
+
+005(4).html
+object 안에 내용물 바꾸는 법 : a.b = 41
+
+005(5).html
+object console log 출력하는 법1 : console.log(a.b)
+
+005(6).html
+object console log 출력하는 법2 : console.log(a["b"]) 
+
+005(7).html
+-이해 못함 : 변수에 a key 자체를 넣을 수 있다.
+
+005(8).html
+object console log 출력 2가지 방법이 있는 이유
+
+006(1).html
+용어 : 배열 : 하나를 선택하고 여러개의 데이터를 담을 수 있다. let a = [b, c]
+
+006(2).html
+console.log에 배열 적는 법 : console.log(a[0]);
+
+006(3).html
+배열 내용 바꾸는 법 : a[0] = "b"
+
+006(4).html
+배열 내용 추가 하는 법 : a[n] = "b";
+
+006(5).html
+배열 무조건 맨 뒤에 추가하는 법 : a.push("");
+
+007.html
+console.log 찍을 때 타입을 알려주는 것 : typeof
+
+008(1).html
+참고 : 자바스크립트의 문제로 우리가 원하는 값이 안 나올 수 있다는 것을 인지하기
+
+008(2).html
+console.log에 2진수로 바꿔서 찍히는 법 : toString
+
+008(3).html
+console.log에 가장 큰 숫자 정수가 찍히게 하는 법 : Number.MAX_SAFE_INTEGER
+
+009.html
+더하기. 빼기. 곱하기. 나누기. 나머지 : + - * / %
+
+010.html
+비교 연산자 : 참이냐? 거짓이냐? ==, !=, >, <, ===
+
+011.html
+산술 연산자 ++a a++
+
+012.html
+논리 연산자 : and, or : && || - true. false
+
+013.html
+문자열 연산 : 변수에 넣고 문자끼리 합쳐주는 법
+
+014.html
+조건 삼항 연산자. 이게 맞으면 이거, 이게 아니면 저거 - 여러번 쓸 수 있다. : var a = (b)?(c)
+
+015(1).html
+조건을 만족시킬 때만 실행하는 법 : if : 조건문 : 만일 ~ 하면 ~ 할텐데...
+
+015(2).html
+if가 아니면 무조건 else에서 실행된다. : if. else 문
+
+015(3).html
+if ~ else if
+
+015(4).html
+if~ else if ~ else
+
+015(5).html
+practice
+
+015(6).html
+현재의 시간 알려주는 법 : var d = new Date();
+
+015(7).html
+현재의 날짜 알려주는 법 : var d = d.getDay();
+
+015(8).html
+switch문 사용법 : 요일(특정 값이 정해져 있는데, 비교할 때 사용)
+
+015(9).html
+선생님의 요일 추출 응용
+
+016(1).html
+배열 총 요소의 갯수를 아는 법 : .length
+
+016(2).html
+계속 반복해서 실행하게 하고 싶을 때1 : 반복문 : for~loop
+
+016(3).html
+var length '효율적(메모리)'으로 만드는 법 vs 비교 : 016(2).html
+
+016(4).html
+object에 어떤 키가 있는 지 모를 때 '키'와 '값'을 다 읽는 법 : for ~ in
+
+016(5).html
+for in 배열 값 읽는 법
+
+016(6).html
+for of 배열 값 읽는 법
+
+016(7).html
+문자열. 글자 하나씩 다 불러오는 법 :  for of 쓰는 법
+
+016(8)practice(1).html
+문제1. userList의 데이터에서 gender가 
+male인 사람만 새 배열 maleUserList에 담고 console창에 출력하세요. for of
+
+016(9)practice(2).html
+문제2. 음료자판기 문제. productList에서 inputCoin으로 구매할 수 있는 음료 목록을 출력하세요.
+
+016(10).html
+조건을 만족하는 동안 계속 실행시키는 법 : while // 예시 - 코인 자판기
+
+016(11).html
+일단 한번은 실행 한 후 조건을 만족하는 동안 계속 실행시키는 법 : do~while
+
+017(1).html
+함수란? 함수 = function = method. 내가 원하는 타이밍에 특정 기능을 수행하게 하는 법
+-설명
+함수를 쓰는 이유 1.재사용이가능 2.원하는 타이밍에 쓸 수 있다. 3.유지보수가 쉽다. 4.코드의 품질이 좋아진다.
+보통 함수를 만들 때마다 주석을 단다.
+주석 : 파라미터는 어떤 형태를 받는 것이다. return값은 어떤 값을 되돌린다.
+return : 반환값이 없는 함수도 있다.(return은 필수 값이 아니다.)
+파라미터가 없는 함수도 있다.(n1, n2) : 파라미터는 무한정 넣을 수 있다.
+파라미터 안에는 선언자가 필요없다. 주는대로 받기 때문이다.
+
+017(2)practice.html
+문제2. 음료자판기 문제. 사용자가 넣은 돈은 파라미터로 받고 
+구매할 수 있는 음료 리스트 반환하기 function, for 0f 사용 
+
+017(3)practice.html
+문제2. 음료자판기 문제. 사용자가 넣은 돈은 파라미터로 받고 
+구매할 수 있는 음료 리스트 반환하기 function, for 0f 사용 
+
+017(4.1)practice.html
+문제2. 음료자판기 문제. 사용자가 넣은 돈은 파라미터로 받고  
+구매할 수 있는 음료 리스트 반환하는 법
+-설명
+ []: 반
+ .:학생이름
+
+017(4.2)
+음료 자판기 문제. 작은 가격부터 순차적으로 배열 정리하는 법 : sort 함수
+
+017(5).html
+변수형 함수 쓰는 법 : function
+
+017(6).html
+변수형 함수 에러 : 순서가 중요해진다.
+
+017(7)practice.html
+사용자 리스트에서 gender 파라미터를 받고 male, female 해당하는 데이터만 반환하는 법 : function
+
+017(8).html
+계산기 만들기 3가지 방법. 숫자 2개에 대한 더하기/빼기/곱하기/나누기를 수행하는 함수
+
+017(9)practice(1).html
+나이조건1 추가. 사용자 리스트에서 gender 파라미터를 받고 male, female 해당하는 데이터만 반환하는 법 : function
+
+017(10)practice.html
+배열 안의 배열(이중 배열) 내용을 부르는 법 : arr2D[i][j]
+
+018.html
+this를 쓰는 법? object 안의 함수에서는 key에 접근할 때는 this를 쓴다.
+object에 있는 함수를 console.log에 찍는 법
+Object를 불러오는 법? var a = new Object
+
+019(1).html
+문자열(string) 내장 함수들1
+-설명
+글자가 몇 개인지 알 수 있는 함수 : length
+문장 안에 locate라는 단어가 몇 번째 있는지 확인하는 함수 : indexOf, lastIndexOf
+글자 잘라내는 함수(파라미터 2개)1 : slice
+slice와 똑같은 것?(음수만 못 쓴다.) substring
+글자 잘라내는 함수2 : substr
+응용 : 날짜 다양하게 추출하는 법(잘 모르겠음)**************
+앞에 것을 찾아 뒤에 것으로 바꿔주는 함수.(하나만 바뀐다.) : replace
+.을 -로 바꾸는 함수 : replace
+발견되는 모든 것을 바꿔주는 법(추후에 배울 것) : 정규식 : replace
+문자열 대문자로 바꿔주는 함수 : toUpperCase()
+문자열 소문자로 바꿔주는 함수 : toLowerCase()
+문자열 합치는 함수 : concat
+문자열 빈 공간 자르는 함수 : trim()
+앞쪽부터 숫자를 채워주는 함수 : padStart()
+fillChar : padStart()와 같은 방식
+뒤에부터 숫자를 채워주는 함수 : padEnd()
+
+019(2).html
+문자열(string) 내장 함수들2
+-설명
+인덱스 문자 하나만 가져오는 함수 : charAt()
+charCodeAt() : 고유 함수에 담겨있는 캐릭터 숫자를 가져옴. 거의 안씀.
+"어떠한 기준(예시 : ("-"))으로 나눠 배열로 들어가는 함수 : split()
+배열을 문장열로 바꾸는 함수 : join
+시작에 이 문자열이 포함되었는지 확인하는 함수 : startsWith()
+마지막에 이 문자열이 포함되었는지 확인하는 함수 : endsWith()
+
+020(1).html
+숫자 내장 함수들
+-설명
+숫자를 문자열(string)로 바꾸는 함수1 : toString
+숫자를 문자열(string)로 바꾸는 법2
+//toExponential(); 지수형 숫자. 잘 안 쓴다.
+소수점 몇 자리까지 끝는 함수 : toFixed() //반올림한다.
+정수랑 다 합쳐서 소수점 몇 자리까지 보여주는 함수 : toPrecision() : 거의 안 씀
+string(문자열) 을 숫자 정수 타입으로 변환하는 함수 : parseInt()
+string(문자열) 을 소수점 숫자 타입으로 변환하는 함수 : parseFloat
+-
+자바스크립트에서 쓸 수 있는 가장 큰 수 표현하는 법
+자바스크립트에서 쓸 수 있는 안전한 가장 큰 수 표현하는 법
+자바스크립트에서 쓸 수 있는 가장 작은 수 표현하는 법
+자바스크립트에서 쓸 수 있는 안전한 가장 작은 수 표현하는 법
+-
+Infinity(무한대)라고 찍히는 법
+마이너스 Infinity(무한대)라고 찍히는 법
+
+020(2).html
+배열을 하나의 문자열로 합치는 법(대신 쉼표 들어감) : toString()
+배열을 하나의 문자열로 합치는 법 : join
+요소 사이마다 새로운 문자를 추가 하는 법 : join
+배열 맨 뒤(끝)에서 하나를 빼는 법 : pop()
+배열 맨 앞에서 하나를 빼는 법 : shift()
+배열 맨 뒤에 추가하는 법 : push()
+배열 맨 앞에 추가하는 법 : unshift()
+배열 사이에 추가하는 법 : splice() 
+배열 사이에 값을 지우고 추가하는 법 : splice()
+배열과 배열을 합치는 법 : concat()
+배열 잘라내는 법 : slice()
+배열 정렬하는 법 : sort()
+배열 거꾸로 정렬하는 법 : reverse
+숫자는 제대로 구현이 안 되니까(sort 에서)
+
+020(3)practice.html
+sort 내부 구조. sort 사용법
+
+020(4).html
+배열에 있는 내용을 특정조건으로 필터해주는 함수 : filter()
+
+025(5)practice.html
+filter 함수 쓰는 법 : practice
+
+020(6).html
+배열 안의 오브젝트를 새로운 구조의 오브젝트로 만드는 함수 : map()
+-참고
+배열이 오브젝트일때만 가능하다.
+
+020(7).html
+배열의 전체 합을 구하는 함수 : reduce
+
+020(8).html
+날짜 함수들
+-설명
+현재 년을 불러오는 함수 : getFullYear()
+대한민국 표준시를 불러오는 함수 : getTime
+현재 pc에 있는 시간이 출력 하는 법 : new Date()
+-
+현재 연도만 가져오는 함수 : getFullYear
+현재 날짜를 가져오는 함수 : getDate
+현재 달을 가져오는 함수 : getMonth
+현재 시간을 가져오는 함수 : getHours
+현재 분을 가져오는 함수 : getMinutes
+현재 초를 가져오는 함수 : getSeconds
+현재 Milliseconds를 가져오는 함수 : getMilliseconds
+현재 요일을 index로 가져오는 함수 : getDay
+
+020(9).html
+-이해 안 됨
+
+020(10).html
+다양하게 현재 시간을 당기고, 빼고 하는 법
+외부 라이브러리 사용법
+-설명
+cdn이란 : contents delivery network
+-절대 경로 방식으로 개발자들이 등록한다는 의미
+-다운로드 안 받아도 절대경로 url을 통해 사용 가능하게 한다.
+-
+https://momentjs.com/
+-시간에 관한 모든 라이브러리가 다 있는 사이트
+-
+구글 검색 : momentjs cdn
+-고리모양 : url 복사 
+-
+-참고
+.min : 미니 파일 
+mini files
+-나의 핵심 기능 : 분석하기 어렵게 만들기 위해서
+-파일 사이즈가 줄어든다. 
+=>
+복구 시키는 법 : beautyfy(함수명 등은 원래 돌아가지 않는다.)
+-
+https://momentjs.com/downloads/moment.min.js -->
+다른 이름으로 링크 저장
+
+020(11).html
+-이해 안 됨
+
+
+020(13).html
+-이해 안 된다.
+
+022(1).html
+Math 객체
+-설명
+반올림 처리하는 함수 : round
+무조건 올림처리해서 정수를 만드는 함수 : ceil
+무조건 내림 : floor
+무조건 정수형 부분만 반환. 소수점 이하는 무조건 버림.
+양수냐? 음수냐? 0이냐? 아는 함수 : sign
+제곱을 나타내는 함수 : pow
+루트값을 나타내는 함수 : sqrt
+무조건 양수 값으로 만들어주는 함수 : abs
+제일 작은 값을 찾아서 알려주는 함수 : min
+제일 큰 값을 찾아서 알려주는 함수 : max
+매번 실행할 때마다 무작위 숫자가 나오는 함수 : random
+randome이 0에서 9사이 값이 나온다.
+1 ~ 10까지의 숫자가 나온다
+100까지의 숫자가 나온다. 
+그 사이 숫자 정수형을 돌려주는 함수 : min, max
+
+022(2)practice.html
+가위바위보 랜덤 함수 만드는 법
+
+022(3)practice.html
+선생님 : 가위, 바위, 보 게임 함수 만드는 법1
+
+022(4)practice.html
+선생님 : 가위, 바위, 보 게임 함수 만드는 법2
+
+023.html
+JSON 객체란? 데이터 통신 포맷
+
+024.html
+Windows 객체들 : 이벤트
+-
+-alert 창 함수
+-사용자에게 의사를 물어보는 함수 : confirm
+
+025.html
+로그인 등을 만드는 함수 간단하게 살펴봄 : getElementById
+
+026practice.html
+백화점 주차 요금 계산 함수 만드는 법
+
+-------------고급 문법----------------
+
+027.html
+this의 여러가지 용도
+
+028(1).html
+Scope이란? Global Scope, Local Scope(전역 Scope, 지역 Scope)
+
+028(2).html
+getDrink 함수
+
+029.html
+에러 안 나게 함수의 파라미터 기본 값 설정 하는 법 : Default Function Parameter
+
+030(1).js
+parameter가 몇 개가 들어가든 상관없게 만드는 법 : ...nums
+
+030(2).js
+.js 터미널 여는 법 : console 확인
+
+031(1).js
+화살표 함수 쓰는 법 : => Arrow Function
+
+032.js
+${}표시 쓰는 법 : Template Literals
+
+033.js
+//Object Literal Syntax Extension
+//이런 형식으로 쓸 수도 있다.
+
+034.js
+배열, 문자열같은 형태의 데이터를 요소 하나 하나 모두 분리해서 사용할 수 있게 해주는 법 : ...cd //Spread Operator
+
+035.js
+오브젝트를 변수 선언해서 가져오는 법 : Object Destructuring
+
+036.js
+변수명을 명확히 인지한 상태에서 쓰고 싶을 때 쓰는 법 : Array Destructuring
+
+037(1).html
+서버랑 통신할 때 쓰는 외부 라이브러리 가져다 쓰는 법 : axios 구글 검색
+
+037(2).html
+Mock 서버. 테스트를 위한 가짜 서버 구축해주는 프로그램 : postman
+구글 검색 : postman
+목적 : 프론트 개발자가 자기가 개발하는 것을 하기 위해서
+
+037(3).html
+비동기 방식1 : promise 방식 // then : 앞에 것 완료 후 그러면
+목적
+달라 : http request : 클라이언트가 서버에게 요청
+요청해줌 : http response
+예전에는 하나하나만 가능했다. 느림
+새로나옴 : ajax : 비동기 방식 -에러가 많다. -> 기다려주게 만들어야 한다. 에러 안 나게
+
+037(4).html
+비동기 방식2 : Async-Await 방식
+
+037(5).html
+비동기 방식3 : fetch
+
+038.html
+에러에 대하여
+try catch를 쓰는 이유 : 혹시나 중요한 함수에 문제가 있나 알기 위해서
+
+039.html
+문법을 엄격하게 검사하는 법 : stript 모드
+
+040(1).html
+다시
+html과 자바스크립트 연결하는 법
+id값은 유일해야 한다.
+. 한 다음 이름으로 접근하면 다 값을 가져온다.
+value 값이란?
+
+040(5).js
+정규식 구글 검색 : 자바스크립트 정규표현식 찾아보기
+정규식 구글 검색 : 자바스크립트 정규식 이메일 주소
+
+041.html
+이벤트 : document : html과 연결
+querySelector()함수
+innerHTML, innerText : 내용 자체가 바뀐다.
+
+042.html
+select 선택 박스를 자바스크립트로 만드는 법
+
+043.html
+영역 위 아래로 추가되는 이벤트 : insertAdjacentHTML(). onclick
+파라미터가 2개
+afterbegin //시작되는 부분을 바꿔준다.
+afterend //끝 부분을 바꿔준다.
+beforebegin //시작되는 점 전에 들어간다.
+beforeend //맨 마지막 다음에 들어간다.
+
+044.html
+addeventlistener란
+참고
+id는 하나의 값만 가진다.
+onclick 이벤트 : 클릭하면 자바스크립트 함수를 호출하라.
+onchange 이벤트 : select가 변하면 작동하는 이벤트
+
+045.html
+focus 이벤트
+
+046.html
+key 이벤트
+keydown //누르는 순간 바로 발생
+keypress : 누른 상태
+keyup : 손을 땠을 때 -> value값은 이때 바뀐다.
+
+047(1).html
+scroll 이벤트
+onload 이벤트 : 모든 게 다 정상적으로 onload 되었을 때 작동해라.(안전하기 위해서~)
+
+047(2).html
+scroll 이벤트
+onload 이벤트 : 모든 게 다 정상적으로 onload 되었을 때 작동해라.(안전하기 위해서~)
+onunload 이벤트 : 브라우저가 닫힐 때
+onuuload : https://homzzang.com/b/js-1387
+
+048(1).html
+포커스를 잃었을 때. 사용자가 반드시 입력해야 하는 함수 일 때 쓰는 함수 : onblur
+event.taget : 최하위 요소를 반환한다.
+https://webisfree.com/2017-09-06/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-event-target-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EC%99%80-currenttarget-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80
+
+048(2).html
+event.taget : 최하위 요소를 반환한다.
+https://webisfree.com/2017-09-06/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-event-target-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EC%99%80-currenttarget-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80
+
+048practice(1).html
+문제 : 음료 자판기 만드는 법
+
+048practice(2).html
+내가 만들어 나가던 음료수 자판기
+
+049.html
+음료수 문제 : 설명 정리
+
+050.html
+음료수 자판기 만드는 법
+
+051.html
+보충 수업 : 시간 계산
+
+052.html
+보충 수업 : return에 대하여
+
+053.html
+단지 보충 설명
+
+054.html
+보충수업 : 값 가져와서 더하기
+
+055.html
+filter에 대한 보충설명 : 줄어가는 과정
+
+056.html
+보충 수업 : onload

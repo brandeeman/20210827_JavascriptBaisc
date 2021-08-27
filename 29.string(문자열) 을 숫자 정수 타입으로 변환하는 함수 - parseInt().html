@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // string(문자열) 을 숫자 정수 타입으로 변환하는 함수: parseInt()
+        //반올림 없음
+        var x = "10";
+        console.log(parseInt(x));
+        console.log(parseInt("10.124"));
+        console.log(parseInt("10.66"));
+        console.log(parseInt("10 20 30")); //맨 앞만 정수를 돌려준다.
+        console.log(parseInt("10 years")); //맨 앞만 정수를 돌려준다.
+        console.log(parseInt("years 30")); //NAN : not a number
+    </script>
+</body>
+
+</html>

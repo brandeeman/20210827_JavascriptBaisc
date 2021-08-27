@@ -1,0 +1,29 @@
+<!-- 참고 : 자바스크립트의 문제로 우리가 원하는 값이 안 나올 수 있다는 것을 인지하기. -->
+<!-- 64비트 부동 소수점으로 자바스크립트가 저장한다. -->
+<!-- 0.2는 이진수로 바꾸면 무한소수가 된다. -->
+<!-- 구글 검색 : 오픈 소스 : bignumber.js - 정확한을 계산한다.-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = 0.2 + 0.1;
+        console.log(x);
+
+        console.log((0.2).toString(2)); //이진수로 바꾸는 법
+
+        let y = 9999999999999999999;
+        console.log(y);
+        console.log(Number.MAX_SAFE_INTEGER);
+        //자바 스크립트의 가장 큰 숫자를 다루는 정수
+        //검색 : 오픈 소스 : bignumber.js - 정확한 값 계산
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!-- 선생님 : 가위, 바위, 보 게임 함수 만드는 법2 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function rspPlayer(userRsp) {
+            const rsp = ["가위", "바위", "보"];
+            const playerRsp = rsp[getRandomInteger(0, 2)];
+
+            if (userRsp == playerRsp) {
+                return {
+                    "userRsp": userRsp,
+                    "palyerRsp": playerRsp,
+                    "winnder": 0
+                };
+            } else if (userRsp == "가위") {
+                if (playerRsp == "보") {
+                    return {
+                        "userRsp": userRsp,
+                        "playerRsp": playerRsp,
+                        "winnder": -1
+                    };
+                }
+            }
+        }
+
+        console.table(rspPlayer("가위"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = ["A", "B", "C", "D"];
+
+        //배열을 하나의 문자열로 합치는 법(대신 쉼표 들어감) : toString()
+        console.log(arr.toString());
+
+        //배열을 하나의 문자열로 합치는 법 : join
+        console.log(arr.join(""));
+
+        //요소 사이마다 새로운 문자를 추가 하는 법 : join
+        console.log(arr.join("*"));
+
+        //배열 맨 뒤(끝)에서 하나를 빼는 법 : pop()
+        console.log(arr.pop());
+        console.log(arr);
+        //var x = arr.pop();
+
+        //배열 맨 앞에서 하나를 빼는 법 : shift()
+        console.log(arr.shift());
+        console.log(arr);
+
+        //배열 맨 뒤에 추가하는 법 : push()
+        arr.push("E");
+        console.log(arr);
+
+        //배열 맨 앞에 추가하는 법 : unshift()
+        arr.unshift("1");
+        console.log(arr);
+
+        //배열 사이에 추가하는 법 : splice()
+        arr.splice(1, 0, "2");
+        console.log(arr);
+        //첫번째 인덱스에 1을 추가한다. 
+        //0은 아무것도 삭제 안한다.
+        //2를 추가한다.
+
+        arr.splice(1, 0, "2", "3", "4", "5");
+        console.log(arr);
+
+        // 배열 사이에 값을 지우고 추가하는 법 : splice()
+        console.log(arr.splice(1, 2, "2"));
+        //가운데 : 2개의 요소를 삭제한다.
+
+        //배열과 배열을 합치는 법 : concat()
+        var myDaughter = 0["남명혜", "김규비"];
+        var mySon = ["정재승", "정경민"];
+        var mySon2 = ["홍길동"];
+        var myChildren = myDaughter.concat(mySon, mySon2);
+        console.log(myChildren);
+
+        //배열 잘라내는 법 : slice()
+        var arr1 = myChildren.slice(1);
+        console.log(arr);
+
+        //배열 정렬하는 법 : sort()
+        var arrSort = myChildren.sort();
+        console.log(arrSort);
+
+        //배열 거꾸로 정렬하는 법 : reverse
+        console.log(arrSort.reverse());
+
+        //숫자는 제대로 구현이 안 되니까(sort 에서)
+        var points = [34, 12, 45, 22, 6, 8, 2, 54];
+        console.log(points.sort()); //숫자 : 제대로 정렬 못함
+
+        //sort의 규칙.( 당장 알고리즘을 이해하기는 어렵다. 규칙같은 것이라고 생각해라.) 
+        // 숫자 : 순서 정렬
+        var p = points.sort(function (a, b) {
+
+            //더 이상 비교할 수 없을만큼 몇 번을 비교하는 거다.
+            if (a > b) return 1; // (1: 양수면 된다.) // '양수'는 두 개 요소의 위치를 바꾸라는 의미
+            else if (a < b) return -1; // (-1: 음수면 된다.) //두 개 요소의 위치를 바꾸지 말라는 의미
+            else return 0; //끝나고 데이터를 돌려준다.
+
+            //위 같은 말
+            return a - b; //큰 수에서 작은 수 정렬하는 법
+            // return b - a; //작은 수에서 큰 수 정렬하는 법
+        });
+    </script>
+</body>
+
+</html>

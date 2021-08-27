@@ -1,0 +1,28 @@
+<!-- 배열 무조건 맨 뒤에 추가하는 법 : a.push(""); -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 40,
+            tel: "010203030303",
+            email: "aaa@mail.com"
+        };
+
+        let cars = [3, "현대자동차", person, "기아"];
+
+        cars.push("쌍용"); //배열 뒤에 계속 추가하는 법 //push
+
+        console.log(cars);
+    </script>
+</body>
+
+</html>

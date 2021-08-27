@@ -1,0 +1,23 @@
+<!-- var length '효율적(메모리)'으로 만드는 법 vs 비교 : 52.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var brands = ["애플", "구글", "페이스북", "아마존", "삼성"];
+
+        var length = brands.length;
+        //var length 효율적으로 만드는 법
+
+        for (var i = 0; i < length; i++) {
+            console.log(brands[i]);
+        }
+    </script>
+</body>
+
+</html>

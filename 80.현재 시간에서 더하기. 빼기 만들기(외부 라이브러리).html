@@ -1,0 +1,53 @@
+<!-- 다양하게 현재 시간을 당기고, 빼고 하는 법
+외부 라이브러리 사용법
+-설명
+cdn이란 : contents delivery network
+-절대 경로 방식으로 개발자들이 등록한다는 의미
+-다운로드 안 받아도 절대경로 url을 통해 사용 가능하게 한다.
+
+https://momentjs.com/
+-시간에 관한 모든 라이브러리가 다 있는 사이트
+
+구글 검색 : momentjs cdn
+-고리모양 : url 복사 
+
+참고
+.min : 미니 파일 
+mini files
+-나의 핵심 기능 : 분석하기 어렵게 만들기 위해서
+-파일 사이즈가 줄어든다. 
+
+https://momentjs.com/downloads/moment.min.js 
+다른 이름으로 링크 저장 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        //여기까지 그대로 복사
+    </script>
+    <script>
+        //시간 계산 하는 법
+        console.log(moment().format("YYYY-MM-DD"));
+
+        console.log(moment().add(-5, "days").format("YYYY-MM-DD"));
+
+        console.log(moment().add(-5, "month").format("YYYY-MM-DD"));
+
+        console.log(moment().add(-5, "year").format("YYYY-MM-DD"));
+
+        console.log(moment().add(2, "day").format("MMM Do YYYY"));
+
+        console.log(moment().subtract(5, "days").format("YYYY-MM-DD"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+NAN : not a number : 얘는 숫자가 아니다. 라는 의미.

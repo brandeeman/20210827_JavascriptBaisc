@@ -1,0 +1,68 @@
+<!-- Scope이란? Global Scope, Local Scope(전역 Scope, 지역 Scope) -->
+<!-- Scope이란? 선언된 변수에 대한 접근성을 의미 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function myFunction1() {
+            let carName = "볼보"; //local Scope
+            console.log(carName);
+        }
+
+        //console.log(carName); 
+        //에러. 이런 걸 Scope라고 한다. 
+        //함수 안에서 선언된 변수는 함수 안에서만 쓸 수 있다. 
+
+        myFunction1();
+
+        //
+
+        let fruitName = "바나나" //Global Scope
+
+        function myFunction2() {
+            console.log(fruitName);
+        }
+
+        myFunction2();
+
+        //
+
+        let moneyName = "원화" //Global Scope
+
+        function myFunction3() {
+            let moneyName = "달라"
+            //내부 선언은 함수 외부에 영향을 미치지 않는다. 
+            console.log(moneyName);
+        }
+
+        myFunction3();
+
+        //
+
+        function add(x1, x2) {
+            var sum = x1 + x2;
+            return sum;
+        }
+
+        add(5, 4);
+
+        function getDrink(inputCoin) {
+            var total = 0;
+            total += inputCoin;
+
+            return total;
+        }
+
+        console.log(getDrink(500));
+        console.log(getDrink(2000));
+        console.log(getDrink(1000));
+    </script>
+</body>
+
+</html>

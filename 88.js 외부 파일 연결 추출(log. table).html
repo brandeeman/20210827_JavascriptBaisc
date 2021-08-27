@@ -1,0 +1,39 @@
+<!-- js 외부 파일 연결 추출 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/4.js/2.user_data.js"></script>
+    <script src="/4.js/common.js"></script>
+    <script>
+        //common.js에 쓰인 함수 사용
+        var ageGroup = getAgeGroup(userList, "age");
+        console.table(ageGroup);
+
+        var users = [{
+                "name": "유재석",
+                "nai": 50
+            },
+            {
+                "name": "김종국",
+                "nai": 46
+            },
+            {
+                "name": "하하",
+                "nai": 41
+            }
+        ];
+
+        var ageGroup = getAgeGroup(users, "nai");
+        console.table(users);
+    </script>
+
+
+</body>
+
+</html>

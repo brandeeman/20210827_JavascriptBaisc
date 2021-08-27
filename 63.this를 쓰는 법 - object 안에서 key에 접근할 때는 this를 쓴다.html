@@ -1,0 +1,40 @@
+<!-- this를 쓰는 법? object 안에서 key에 접근할 때는 this를 쓴다. -->
+<!-- object에 있는 함수를 console.log에 찍는 법 -->
+<!-- Object를 불러오는 법? var a = new Object -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            getFullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        console.log(person.getFullName());
+        //object에 있는 함수를 console.log에 찍는 법
+
+        //
+
+        var person = {};
+        //같은 말 // var person = {}; = var person = new Object();
+        var person = new Object();
+
+        //위에 것과 별개인가? 아니면 가져온 것인가?
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.getFullName = function () {
+            return this.firstName + " " + this.lastName;
+        }
+    </script>
+</body>
+
+</html>

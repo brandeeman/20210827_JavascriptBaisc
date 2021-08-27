@@ -1,0 +1,26 @@
+<!-- 이벤트 - id를 통해 '버튼' 연결 - getElementById. addEventListener -->
+
+<!-- id는 하나의 값만 가진다. -->
+<!-- id만 있을 때 : 협업할 때 디자이너가 쉽게 볼 수 있다. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- id를 통해 이벤트 연결 -->
+    <button id="btn">클릭</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            console.log("이벤트 클릭");
+        });
+        //click은 임의의 단어가 아니다.
+        //click이란 '이벤트'가 들어오면 이걸 듣는다. 그리고 함수를 실행한다.
+    </script>
+</body>
+
+</html>

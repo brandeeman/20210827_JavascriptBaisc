@@ -1,0 +1,12 @@
+value는 return 해 주는 값
+
+---
+
+return을 만나는 순간 함수는 무조건 종료가 된다.
+
+예)
+  return format.replace("YYYY", year).replace("MM", month.toString().padStart(2,0)).repalce("DD", day) + "/" + month.toString()
+                .padStart(2, 0) + "/" + day;
+        }
+---
+

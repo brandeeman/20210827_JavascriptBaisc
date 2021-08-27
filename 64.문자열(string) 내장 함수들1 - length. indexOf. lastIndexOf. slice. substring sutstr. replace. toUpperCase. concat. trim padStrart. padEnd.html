@@ -1,0 +1,170 @@
+<!-- 문자열(string) 내장 함수들1 -->
+<!-- -설명 -->
+<!-- 글자가 몇 개인지 알 수 있는 함수 : length -->
+<!-- 문장 안에 locate라는 단어가 몇 번째 있는지 확인하는 함수 : indexOf, lastIndexOf -->
+<!-- 글자 잘라내는 함수(파라미터 2개) : slice -->
+<!-- slice와 똑같은 것? substring -->
+<!-- 첫번째 : 시작인덱스번호, 두번째 : 잘라낼 길이를 넣어주는 법 : substr -->
+<!-- 앞에 것을 찾아 뒤에 것으로 바꿔주는 함수.(하나만 바뀐다.) : replace -->
+<!-- .을 -로 바꾸는 함수 : replace -->
+<!-- 정규식 : replace -->
+<!-- 문자열 대문자로 바꿔주는 함수 : toUpperCase() -->
+<!-- 문자열 소문자로 바꿔주는 함수 : toLowerCase() -->
+<!-- 문자열 합치는 함수 : concat -->
+<!-- 문자열 빈 공간 자르는 함수 : trim() -->
+<!-- 앞쪽에서 채워지는 함수 : padStart() -->
+<!-- 뒤에서 채워지는 함수 : padEnd() -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //문자열 데이터가 들어가는 순간 string 객체가 된다. 
+        var txt = "abcdefghijklmnopqrstuvwxyz";
+        console.log(txt.length); //몇 글자인지 알 수 있는 방법
+
+        //문장 안에 locate라는 단어가 몇 번째 있는지 확인하는 방법 : indexOf, lastIndexOf
+        var txt = "Please locate where locate occur!";
+        console.log(txt.indexOf("locate"));
+
+        //lastIndexOf : 마지막에 있는 locate라는 단어가 몇 번째 있는지 확인하는 방법
+        console.log(txt.lastIndexOf("locate"));
+
+        //문자가 없는 경우 : -1 반화
+        console.log(txt.indexOf("sf23r2rwe"));
+
+        //문자가 있다. 참이라는 의미
+        if (txt.indexOf("locate") > -1) {}
+
+        //참고
+        var tel = "010-0303-2222";
+        if (tel.indexOf("-") > -1) {
+            console.log(tel.indexOf("-"));
+            console.log("똑바로 쓰세요");
+        }
+
+        //글자 잘라내는 함수(파라미터 2개)1 : slice
+        var text = "Apple, Banana, Kiwi";
+        console.log(text.slice(7, 13));
+        //slice(파라미터를 2개 받는다.) 1.시작 인덱스 번호 2.종료 인덱스 번호
+        console.log(text.slice(7)); //안 넣으면 무조건 끝까지 잘라낸다.
+        console.log(text.slice(-12)); //음수로 넣으면 뒤에서부터 시작한다. 나오는 건 똑바로 나온다.
+
+        //주민번호 뒷자리 알아내는 법
+        var txt = "9904121";
+        console.log(txt.slice(-1));
+
+        //slice == substring 
+        //slice와 100% 똑같다. 음수만 못 쓴다.
+        console.log(text.substring(7, 13));
+        console.log(text.substring(7));
+
+        //글자 잘라내는 함수2 : substr 
+        //첫번째 : 시작인덱스번호 // 두번째 : 잘라낼 길이를 넣어준다.  
+        //20210624
+        var date = "20210624";
+        var year = date.slice(0, 4);
+        var year2 = date.substring(0, 4);
+        var year3 = date.substr(0, 4);
+        console.log(year3);
+
+        var date = "20210624";
+        var month = date.slice(4, 6);
+        var month2 = date.substring(4, 6);
+        var month3 = date.substr(4, 2);
+
+        var date = "20210624";
+        var day = date.slice(-2);
+        var day2 = date.substring(6);
+        var day3 = date.substr(6, 2);
+
+        //응용 : 날짜 다양하게 추출하는 법
+        var date = "202134.2310.322324" //2021-10-24
+        var year = date.substr(0, 4);
+        var month = date.substr(9, 2);
+        var day = date.slice(-2);
+
+        console.log(year + "-" + month + "-" + day);
+
+        //응용 : 날짜 다양하게 추출하는 법? 
+        var date = "2021.10.24";
+        date.substring(0, date.indexOf("."));
+        var b = date.substring(date.indexOf(".") + 1, date.lastIndexOf("."));
+        console.log(b);
+        console.log(date.replace(".", "-"));
+
+        //앞에 것을 찾아 뒤에 것으로 바꿔주는 법. : replace
+        //첫번째 발견 하나만 바뀐다.
+        //.을 -로 바꾸는 법 : replace
+        var date = "2021.10.24";
+        console.log(date.replace(".", "-"));
+
+        //발견되는 모든 것을 바꿔주는 법(추후에 배울 것) : 정규식 : replace
+        console.log(date.replace(/\./g, "-"));
+        // g - 글로벌
+
+
+        //문자열 대문자로 바꿔주는 함수 : toUpperCase()
+        var txt = "Hello World";
+        console.log(txt.toUpperCase());
+
+        //문자열 소문자로 바꿔주는 함수 : toLowerCase()
+        console.log(txt.toLowerCase());
+
+        //문자열 합치는 함수 : concat
+        var text1 = "Hello";
+        var text2 = "World";
+        console.log(text1.concat(" ", text2, "!"));
+
+        //앞 뒤 문자열 빈 공백 제거 함수 : trim()
+        var text = "      Hello World      ";
+        console.log(text);
+        console.log(text.trim());
+
+
+        // 앞쪽부터 숫자를 채워주는 함수 : padStart()
+        var txt = "9";
+        console.log(txt.padStart(4, 0));
+
+        //첫번째 문자열, 두번째 총길, 세번째 뭘로 채울지..
+
+        //함수 - fillChar : padStart()와 같은 방식
+        function fillChar(str, len, s) {
+            //"9"
+            //str.length = 1
+            //while(1 < 4){
+            // 0+"9"
+            // str = "09"
+            //}
+            // 2<4
+            // str 0 + "09";
+            // str = "009";
+            // 3<4
+            // str = 0 + "009";
+
+            while (str.length < len) {
+                str = s + str;
+            }
+            return str;
+        }
+
+        //4개의 길이
+        console.log(fillChar("9", 4, 0));
+
+
+        //padStart(). 첫번째 - 문자열의 총길이, 두번째 - 뭘로 채울래???
+        var txt = "9"; //0009
+        console.log(txt.padStart(4, 0));
+
+        //padEnd() : 뒤로 채워진다. //5000
+        var txt = "5";
+        console.log(txt.padEnd(4, 0));
+    </script>
+</body>
+
+</html>

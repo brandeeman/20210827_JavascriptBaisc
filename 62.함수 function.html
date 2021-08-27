@@ -1,0 +1,45 @@
+<!-- 함수란? 함수 = function = method. 내가 원하는 타이밍에 특정 기능을 수행하게 하는 법 -->
+<!-- 함수를 쓰는 이유 1.재사용이가능 2.원하는 타이밍에 쓸 수 있다. 3.유지보수가 쉽다. 4.코드의 품질이 좋아진다. -->
+<!-- 보통 함수를 만들 때마다 주석을 단다. -->
+<!-- 주석 : 파라미터는 어떤 형태를 받는 것이다. return값은 어떤 값을 되돌린다. -->
+<!-- return : 반환값이 없는 함수도 있다.(return은 필수 값이 아니다.) -->
+<!-- 파라미터가 없는 함수도 있다.(n1, n2) : 파라미터는 무한정 넣을 수 있다. -->
+<!-- 파라미터 안에는 선언자가 필요없다. 주는대로 받기 때문이다. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add(n1, n2) {
+            //add : 함수 이름 : 아무거나 써도 된다.
+            //n1, n2: 파라미터. 내가 넣고 싶은 값 아무거나 넣을 수 있다.(데이터유형 상관없다.)
+            //파라미터는 존재하지 않을 수 있다.
+            //파라미터는 아무이름이나 써줘도 된다. 
+            return n1 + n2;
+        }
+
+        function calculator(n1, n2) {
+            let y = n1 + n2;
+            return y;
+        }
+
+        let sum = add(10, 4);
+        console.log(sum); //function의 코드 블럭을 여러 군대에서 실행시킬 수 있다. 
+
+        console.log(add(12, 7));
+        console.log(add(43, 3));
+
+        function getFullName(firstName, lastName) {
+            return firstName + " " + lastName;
+        }
+
+        getFullName("John", "Doe");
+    </script>
+</body>
+
+</html>

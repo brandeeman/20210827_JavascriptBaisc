@@ -1,0 +1,52 @@
+<!-- 가위바위보 랜덤 함수 만드는 법 -->
+<!-- 함수명 - rspPlayer -->
+<!-- 파라미터 1개 - "가위", "바위", "보" -->
+<!-- const arrRsp = ["가위", "바위", "보"] -->
+<!-- random 함수를 써서 0~2까지 정수를 무작위로 나오게 해서 -->
+<!-- 이것을 arrRsp 배열에 인덱스번호 넣으면 -->
+<!-- return - 오브젝트 타입 - {userRs:"", playerRsp:"", winnder:이기면 1, 지면 -1, 무승부면 0} -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.table(rspPlayer2("가위"));
+
+        function rspPlayer2(userRsp) {
+            const rsp = ["가위", "바위", "보"];
+            const playerRsp = rsp[getRandomInteger(0, 2)];
+            const winValue = {
+                "가위": "보",
+                "바위": "가위",
+                "보": "바위"
+            };
+
+            //이길 수 있는 경우의 수를 미리 셋팅
+
+            // "userRsp": userRsp : 미리 내가 낸 패 
+            // "playerRsp": playerRsp :상대방이 낸 패
+
+            return {
+                "userRsp": userRsp,
+                "playerRsp": playerRsp,
+                "winner": (userRsp == playerRsp) ? 0 : (winValue[userRsp] == playerRsp) ? 1 : -1
+                //winValue[userRsp] : 키값으로 찾는다.
+            }
+        }
+
+        // rspPlayer2("바위");
+
+        console.table(rspPlayer2("가위"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!-- 동일한 변수 재선언 가능 : var a -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = 5;
+        var y = 7;
+        var z = x + y;
+
+        console.log("x", x);
+        console.log("y", y);
+        console.log("z", z);
+
+        var x = 9; //변수 재선언
+        console.log("x", x);
+
+        var a = 1.25;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!-- object console log 출력하는 법1 : console.log(a.b) -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 40,
+            tel: "010203030303",
+            email: "aaa@mail.com"
+        };
+
+        console.log(person.firstName); //key 중에 firstName과 동일한 key를 찾는다. -> 값을 출력한다.
+
+        person.age = 41;
+
+        console.log(person.age); //바뀐 나이를 보여준다.
+    </script>
+</body>
+
+</html>

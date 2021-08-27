@@ -1,0 +1,33 @@
+<!-- for of 배열 값 읽는 법 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var brands = ["애플", "구글", "페이스북", "아마존", "삼성"];
+
+        for (var index in brands) {
+            console.log(brands[index]);
+        }
+
+        //비교
+
+        for (var i = 0; i < brands.length; i++) {
+            console.log(brands[i]);
+        }
+
+        //비교
+
+        //for of는 배열의 value 값을 추출한다.
+        for (var brand of brands) {
+            console.log(brand);
+        }
+    </script>
+</body>
+
+</html>

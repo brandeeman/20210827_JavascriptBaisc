@@ -1,0 +1,26 @@
+<!-- 이벤트 : document : html과 연결 -->
+<!-- querySelector()함수 -->
+<!-- innerHTML, innerText : 내용 자체가 바뀐다. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <h2>H2 영역입니다.</h2>
+    <script>
+        //id로 접근
+        document.querySelector("#div1").innerHTML = '<h1>Hello world!</h1>';
+        //innerHTML : 안에 hello world를 넣어주라는 의미
+
+        //태그로 접근
+        document.querySelector("h2")[0].innerText = "H2 영역이 바뀌었습니다.";
+        //innerText : text 요소로 넣어주라는 의미
+    </script>
+</body>
+
+</html>
