@@ -1,0 +1,81 @@
+<!-- 문제2. 음료자판기 문제. 사용자가 넣은 돈은 파라미터로 받고  -->
+<!-- 구매할 수 있는 음료 리스트 반환하기 function, for 0f 사용  -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //함수를 선언한다.
+        //함수 이름은 getProductList
+        //파라미터는 inputCoin
+        //inputCoin으로 구매할 수 있는 음료 목록을 productList 배열에서 추출해서
+        //새로운 배열로 만들어서
+        //그녀석을 return 해주세요.
+        //받는 쪽에서는 var, letoutputList =
+        //cosole.table(outputList);
+
+        //typeof
+
+        //        var num = 4;
+        //      console.log(typeof (num)); //number
+
+        //동전이 숫자나 문자일까?
+
+
+        function getProductList(inputCoin) {
+
+            var productList = [{
+                    name: "솔의눈",
+                    price: 700
+                },
+                {
+                    name: "커피",
+                    price: 700
+                },
+                {
+                    name: "파워레이드",
+                    price: 1200
+                },
+                {
+                    name: "오렌지",
+                    price: 1000
+                },
+                {
+                    name: "보리차",
+                    price: 1200
+                },
+                {
+                    name: "밀키스",
+                    price: 800
+                },
+            ];
+
+            //  console.log(productList[0].price);
+
+            for (var product of productList) {
+                //console.log(product);
+                if (product.price <= inputCoin) {
+                    //  console.log("ab", product.price);
+                    output.push(product);
+                }
+            }
+
+            return output;
+        }
+
+        var inputCoin = 800;
+        var output = [];
+
+        getProductList(inputCoin);
+
+        console.table(output);
+    </script>
+</body>
+
+</html>

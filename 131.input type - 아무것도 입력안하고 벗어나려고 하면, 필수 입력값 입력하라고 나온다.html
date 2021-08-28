@@ -1,0 +1,29 @@
+<!-- 포커스를 잃었을 때. 사용자가 반드시 입력해야 하는 함수 일 때 쓰는 함수 : onblur -->
+<!-- event.taget : 최하위 요소를 반환한다. -->
+<!-- event.taget 프로피터란? 사이트 : https://webisfree.com/2017-09-06/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-event-target-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EC%99%80-currenttarget-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="" onblur="myFunction(event);">
+    <!-- //사용자가 반드시 입력해야 함수 일 때 -->
+    <!-- 다른 곳으로 빠져나갈 때 쓰는 함수 : onblur -->
+    <script>
+        function myFunction(e) {
+            if (e.target.value == "") { //값이 없다면
+                //e.target.style.fontSize = "24pt";
+
+                alert("필수 입력값입니다. 반드시 입력하세요. 입력안하면 못나가요.");
+                e.target.focus(); //입력해야 빠져 나올 수 있다.
+            }
+
+        }
+    </script>
+</body>
+
+</html>

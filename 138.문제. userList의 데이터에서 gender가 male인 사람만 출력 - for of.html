@@ -1,0 +1,29 @@
+<!-- 문제1. userList의 데이터에서 gender가 male인 사람만 출력 - for of -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/4.js/2.user_data.js"></script>
+
+    <script>
+        var maleUserList = [];
+
+        for (var user of userList) {
+            if (user.gender == "male") {
+                maleUserList.push(user);
+            }
+        }
+
+        console.table(maleUserList);
+
+        // console.table(userList.filter(u => u.gender == "male"));
+    </script>
+
+</body>
+
+</html>

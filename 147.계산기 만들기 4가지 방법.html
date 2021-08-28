@@ -1,0 +1,73 @@
+<!-- 문제4. 계산기 만들기 4가지 방법. 숫자 2개에 대한 더하기/빼기/곱하기/나누기를 수행하는 함수
+
+파라미터로 숫자 2개와 operator인 +,-*,/ 를 입력받고 계산 수행 
+함수명 calculator
+파라미터명 n1, n2, operator
+return 계산된 값
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        function calculator1(n1, n2, operator) {
+            if (operator == "+") {
+                return n1 + n2;
+            } else if (operator == "-") {
+                return n1 - n2;
+            } else if (operator == "*") {
+                return n1 * n2;
+            } else if (operator == "/") {
+                return n1 / n2;
+            }
+        }
+
+        // 2 
+        //이게 최고
+        function add(n1, n2) {
+            return n1 + n2;
+        }
+
+        function minus(n1, n2) {
+            return n1 - n2;
+        }
+
+        function mutiple(n1, n2) {
+            return n1 * n2;
+        }
+
+        function divide(n1, n2) {
+            return n1 - n2;
+        }
+
+        // 3
+        function calculator2(n1, n2, operator) {
+            if (operator == "+") {
+                return add(n1, n2);
+            } else if (operator == "-") {
+                return minus(n1, n2);
+            } else if (operator == "*") {
+                return mutiful(n1, n2);
+            } else if (operator == "/") {
+                return divide(n1, n2);
+            }
+        }
+
+        //add(4,7);
+        console.log(calculator2(4, 3, "+"));
+
+        //4
+        //절대 쓰지 말 것
+        function calculator3(n1, n2, operator) {
+            return eval(n1 + operator + n2); //문자를 프로그램 코드로 실행한다.
+        } //해킹 당할 위험 있는 코드
+    </script>
+</body>
+
+</html>

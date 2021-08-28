@@ -1,0 +1,60 @@
+<!-- 음료 자판기 문제. 작은 가격부터 순차적으로 배열 정리하는 법 : sort 함수 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var productList = [
+
+            {
+                name: "솔의눈",
+                price: 700
+            },
+            {
+                name: "커피",
+                price: 700
+            },
+            {
+                name: "파워레이드",
+                price: 1200
+            },
+            {
+                name: "오렌지",
+                price: 1000
+            },
+            {
+                name: "보리차",
+                price: 1200
+            },
+            {
+                name: "밀키스",
+                price: 800
+            },
+        ];
+
+        //*코드를 짜지말고 생각을 다 한글로 적어라.
+
+        // 1.사용자가 입력한 금액으로 살 수 있는 음료 목록을 담을 새로운 배열을 하나 만든다.
+        // 2.전체 음료 목록을 반복을 돌리면서 음료의 가격이 사용자가 입려한 금액보다 같거나 작으면,
+        // 이 음룔을 1번에서 정의한 배열에 추가한다.
+        // 3.1번에서 정의한 새로운 배열을 반환한다.(return)
+
+        var p2 = productList.sort(function (a, b) {
+
+            // if (a.price > b.price) return 1; // (1: 양수면 된다.)
+            // else if (a.price < b.price) return -1; // (-1: 음수면 된다.)
+            // else return 0;
+
+            return a.price - b.price; //작은 가격순으로 순차적으로 배열을 만들어 정리
+        });
+
+        console.table(p2);
+    </script>
+</body>
+
+</html>

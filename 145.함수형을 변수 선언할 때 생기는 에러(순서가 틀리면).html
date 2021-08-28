@@ -1,0 +1,50 @@
+<!-- 변수형 함수 에러 -->
+<!-- 이럴 때는 순서가 중요하다. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var productList = [{
+            name: "솔의눈",
+            price: 700
+        }, {
+            name: "커피",
+            price: 700
+        }, {
+            name: "파워레이드",
+            price: 1200
+        }, {
+            name: "오렌지",
+            price: 1000
+        }, {
+            name: "보리차",
+            price: 1200
+        }, {
+            name: "밀키스",
+            price: 800
+        }, ];
+
+        var inputCoin = 800;
+        let output = getProductList(inputCoin);
+
+        //함수명을 변수명으로 쓰고 싶다면
+        var getProductList = function (inputCoin) {
+            let outputList = [];
+            for (let product of productList) {
+                if (product.price <= inputCoin) {
+                    outputList.push(product);
+                }
+            }
+
+            return outputList;
+        }
+    </script>
+</body>
+
+</html>

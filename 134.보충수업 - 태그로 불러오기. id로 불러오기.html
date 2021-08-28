@@ -1,0 +1,28 @@
+<!-- 보충수업 - 태그로 불러오기. id로 불러오기 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="myFunction();">클릭</button>
+  <!-- 태그로 불러오기 -->
+  <button id="btn">클릭2</button>
+  <!-- id로 불러오기 -->
+  <select name="" id="sel">
+    <option value="a">a</option>
+    <option value="b">b</option>
+  </select>
+  <script>
+    function myFunction() {
+      console.log("버튼 클릭 - 함수 호출");
+    }
+
+    document.getElementById("sel").addEventListener("change", myFunction);
+  </script>
+</body>
+
+</html>

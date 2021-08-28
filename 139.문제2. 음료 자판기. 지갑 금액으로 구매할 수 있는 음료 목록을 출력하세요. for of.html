@@ -1,0 +1,54 @@
+<!-- 문제2. 음료 자판기. 지갑 금액으로 구매할 수 있는 음료 목록을 출력하세요. for of -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var productList = [
+
+            {
+                name: "솔의눈",
+                price: 700
+            },
+            {
+                name: "커피",
+                price: 700
+            },
+            {
+                name: "파워레이드",
+                price: 1200
+            },
+            {
+                name: "오렌지",
+                price: 1000
+            },
+            {
+                name: "보리차",
+                price: 1200
+            },
+            {
+                name: "밀키스",
+                price: 800
+            },
+        ];
+
+        var inputCoin = 800;
+
+        var output = [];
+
+        for (var product of productList) {
+            if (product.price <= inputCoin) {
+                output.push(product);
+                // console.log(product.name);
+            }
+        }
+        console.table(output);
+    </script>
+</body>
+
+</html>

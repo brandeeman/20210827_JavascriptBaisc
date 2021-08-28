@@ -1,0 +1,48 @@
+<!-- key 이벤트 -->
+<!-- keydown : 누르는 순간 바로 발생 -->
+<!-- keypress : 누른 상태 -->
+<!-- keyup : 손을 땠을 때 -> value값은 이때 바뀐다. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        input {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- keyup : 두번째로 넘어가야 한다. 현재 일어나는 이벤트 객체 :event -->
+    <input type="tel" name="" id="" maxlength="3" onkeyup="myFunction('tel2', 3,event);">-
+    <input type="tel" name="" id="tel2" maxlength="4" onkeyup="myFunction('tel3', 4,event);">-
+    <input type="tel" name="" id="tel3" maxlength="4">
+    <input type="search" name="" id="" onkeypress="checkEnter(event);">
+    <!-- enter가 눌리는 순간 : checkEnter(event) -->
+    <script>
+        function myFunction(id, len, e) {
+            if (e.target.value.length == len) { //e.target : 한 줄 요소를 다 가져온다. //value : 값을 가져온다. //length : 문자열 길이
+                document.getElementById(id).focus(); //focus 그 자리로 이동한다.
+            }
+            // console.log(e.type);
+            // console.log(e.target.value);
+        }
+
+        function doSearch() {
+            console.log("조회 실행");
+        }
+
+        function checkEnter(e) {
+            console.log(e.keyCode); //keycode : 에스키 코드
+            if (e.keyCode == 13) {
+                //enter = 13
+                doSearch();
+            }
+        }
+    </script>
+</body>
+
+</html>

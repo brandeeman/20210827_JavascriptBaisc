@@ -1,0 +1,38 @@
+<!-- focus 이벤트 - focus. onfocus. onblur -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="" onfocus="javascript:console.log('focus 이벤트 발생');">
+    <!-- onfocus. focus가 이동하면 콘솔 실행 -->
+
+    <input type="text" name="" id="" onfocus="myFunction();">
+    <!-- onfocus. focus가 이동하면 함수 실행 -->
+
+    <input type="text" name="" id="txt">
+    <!-- 시작 focus 연결 : id -->
+
+    <input type="text" name="" onblur="myFunction();">
+    <!-- onblur : focus가 해지될 때 실행 -->
+
+    <button id="btn" onclick="javascript:console.log('클릭');">클릭</button>
+
+    <script>
+        function myFunction() {
+            console.log('blur 이벤트 발생');
+        }
+
+        document.getElementById("txt").focus();
+        //시작 focus 연결
+
+        document.getElementById("btn").click();
+        // id = btn 연결
+    </script>
+</body>
+
+</html>
