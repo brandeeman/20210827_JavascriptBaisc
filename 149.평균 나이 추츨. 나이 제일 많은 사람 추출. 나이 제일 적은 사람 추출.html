@@ -1,0 +1,65 @@
+<!-- 나이의 총합 -->
+<!-- 평균 -->
+<!-- 나이가 제일 많은 사람 -->
+<!-- 나이가 제일 적은 사람 -->
+<!-- 숫자로 리턴 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/4.js/2.user_data.js"></script>
+    <script>
+        function getUserAgeMath() {
+            let sum = 0;
+            let maxAge = 0;
+            let minAge = Number.MAX_SAFE_INTEGER;
+
+            // let minAge = 0;
+
+            // if(userList.length > 0){
+            //     minAge = userList[0].age;
+            // }
+
+            for (var user of userList) {
+                sum += user.age;
+
+                if (user.age > maxAge) {
+                    maxAge = user.age;
+                }
+
+                if (user.age < minAge) {
+                    minAge = user.age;
+                }
+
+            }
+
+            let avg = sum / userList.length;
+
+            //return은 모든 데이터형을 return 할 수 있다.
+            // return {
+            //     sum: sum,
+            //     avg: avg,
+            //     maxAge: maxAge,
+            //     minAge: minAge
+            // }
+
+            //키이름과 변수명이 똑같을 때 키 이름을 안 써도 된다.
+            return {
+                sum,
+                avg,
+                maxAge,
+                minAge
+            }
+        }
+
+        let userMath = getUserAgeMath();
+        console.table(userMath);
+    </script>
+</body>
+
+</html>

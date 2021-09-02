@@ -1,0 +1,168 @@
+<!-- 음료수 자판기 만드는 법 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="inputAmount(100);">100원 투입</button>
+    <button onclick="inputAmount(500);">500원 투입</button>
+    <button onclick="inputAmount(1000);">1000원 투입</button>
+    <br>
+    <br>
+    <div>
+        <label>음료자판기 잔돈</label><input type="text" name="" id="total_vending_amount" value="1000" readonly>
+        <label>투입금액</label><input type="text" name="" id="total_input_amount" value="0" readonly>
+        <label>내지갑</label><input type="text" name="" id="total_customer_amount" value="10000" readonly>
+    </div>
+    <br>
+    <br>
+    <button onclick="requestDrink('1');" id="btnDrink1">코카콜라(700원, 재고수<span id="drink_stock1">5</span>)</button>
+    <button onclick="requestDrink(2);" id="btnDrink2">오렌지주스(1200원, 재고수<span id="drink_stock2">5</span>)</button>
+    <!-- 숫자랑 문자랑 자바스크립트는 맞춰준다. 이렇게 써줘도 상관없다. -->
+    <button onclick="requestDrink('3');" id="btnDrink3">커피(500원, 재고수<span id="drink_stock3">5</span>)</button>
+    <button onclick="requestDrink('4');" id="btnDrink4">물(700원, 재고수<span id="drink_stock4">5</span>)</button>
+    <button onclick="requestDrink('5');" id="btnDrink5">보리차(1200원, 재고수<span id="drink_stock5">5</span>)</button>
+    <button onclick="requestDrink('6');" id="btnDrink6">포카리(1000원, 재고수<span id="drink_stock6">5</span>)</button>
+    <button onclick="requestDrink('7');" id="btnDrink7">뽀로로(1300원, 재고수<span id="drink_stock7">5</span>)</button>
+
+    <br>
+    <br>
+    <div id="output" style="width:100%;height:150px;overflow-y: auto;border:2px solid #222;"></div>
+    <script>
+        //초기값을 넣어준다.
+        let total_vending_amount = 1000;
+        let total_input_amount = 0;
+        let total_customer_amount = 10000;
+
+        //초기값을 넣어준다.
+        let drinkList = [{
+                drinkId: "1",
+                drinkName: "코카콜라",
+                price: 700,
+                stock: 5
+            },
+            {
+                drinkId: "2",
+                drinkName: "오렌지주스",
+                price: 1200,
+                stock: 5
+            },
+            {
+                drinkId: "3",
+                drinkName: "커피",
+                price: 500,
+                stock: 5
+            },
+            {
+                drinkId: "4",
+                drinkName: "물",
+                price: 700,
+                stock: 5
+            },
+            {
+                drinkId: "5",
+                drinkName: "보리차",
+                price: 1200,
+                stock: 5
+            },
+            {
+                drinkId: "6",
+                drinkName: "포카리",
+                price: 1000,
+                stock: 5
+            },
+            {
+                drinkId: "7",
+                drinkName: "뽀로로",
+                price: 1300,
+                stock: 5
+            }
+        ];
+
+        function inputAmount(amount) {
+            var output = document.getElementById("output");
+            if (amount <= total_customer_amount) {
+                //투입 금액이 내 지갑에 있는 금액보다 작아야 한다.
+                total_input_amount += amount; //투입 금액
+                total_customer_amount -= amount; //내 지갑
+                total_vending_amount += amount; //잔돈
+
+                //뽑을 수 있는 것을 yellow로 바꿔줘라.
+                for (var drink of drinkList) {
+                    if (drink.price <= total_input_amount) {
+                        document.getElementById("btnDrink" + drink.drinkId).style.backgroundColor = "yellow";
+                    }
+                }
+
+                document.getElementById("total_input_amount").value =
+                    total_input_amount; //라벨의 아이디 값 //value : 값을 넣어준다. 
+                document.getElementById("total_customer_amount").value = total_customer_amount; //라벨의 아이디 값
+                document.getElementById("total_vending_amount").value = total_vending_amount; //라벨의 아이디 값
+
+                output.insertAdjacentHTML("beforeend", `<p>${amount}이 투입되었습니다.</p>`); //고객이 넣은 돈 : amount
+                output.insertAdjacentHTML("beforeend", `<p>총 투입 금액은 ${total_input_amount}입니다.</p>`);
+                output.insertAdjacentHTML("beforeend", `<p>당신의 지갑에는 ${total_customer_amount}이 남아 있습니다.</p>`);
+            } else {
+                output.insertAdjacentHTML("beforeend", `<p>내 지갑에 남아 있는 돈이 ${total_customer_amount} 입니다.</p>`);
+                output.insertAdjacentHTML("beforeend", `<p>${amount}를 투입할 수 없습니다.</p>`);
+            }
+            output.scrollTop = output.scrollHeight; //스크롤이 자동으로 움직이게 한다.
+        }
+
+        function requestDrink(drinkId) { //drink 목록에 Id 값이 있다.
+            let drink = drinkList.filter(d => d.drinkId == drinkId)[0]; //첫번째 요소를 가져오기 위해 0을 넣어준다.
+            //filter-> 이 내용
+            //<1> {
+            //     drinkId: "1",
+            //     drinkName: "코카콜라",
+            //     price: 700,
+            //     stock: 5
+            // }
+            //filter란? 내가 원하는 것만 뽑는 함수. 자바스크립트 내장 함수. filtering 조건의 함수를 던져달라는 의미. 자동으로 for문을 하나씩 읽기 시작. 그걸 drink라는 이름으로 받는다.
+            if (drink.stock > 0) {
+                if (total_input_amount >= drink.price) {
+                    let changes = total_input_amount - drink.price; //돌려줘야 할 잔돈
+
+                    if (total_vending_amount >= changes) {
+                        output.insertAdjacentHTML("beforeend",
+                            `<p>${drink.drinkName} 음료가 나왔습니다. 잔돈 ${changes}이 나옵니다.</p>`);
+                        total_customer_amount += changes;
+                        drink.stock -= 1; //<1>drinkList 주소값? 이 함수 안에만 바뀐다. 원본을 찾아 //pc의 메모리 - 블럭 주소 참조/위치만 알고 있다.
+                        //var x=2 : x와 2의 위치는 다르다. x는 2의 위치를 참조한다. 4로 바꾸면 2는 그대로 놔두고 4를 참조. 2는 쓰레기 값
+                        total_input_amount = 0; //투입 금액을 0원으로 만들어준다.
+                        total_vending_amount -= changes;
+
+                        document.getElementById("total_input_amount").value = total_input_amount;
+                        document.getElementById("total_customer_amount").value = total_customer_amount;
+                        document.getElementById("total_vending_amount").value = total_vending_amount;
+
+                        document.getElementById("drink_stock" + drinkId).innerText = drink.stock; //재고값을 빼준다.
+
+                        output.insertAdjacentHTML("beforeend", `<p>이제 당신 지갑에는 총 ${total_customer_amount} 있습니다.</p>`);
+
+                        //초기값으로 만든다. initial : 원래의 색으로 돌아간다.
+                        for (var item of drinkList) {
+                            document.getElementById("btnDrink" + item.drinkId).style.backgroundColor = "initial";
+                        }
+
+                    } else {
+                        output.insertAdjacentHTML("beforeend",
+                            `<p>음료자판기에 잔돈이 없어서 ${drink.drinkName} 음료를 구매할 수 없습니다.</p>`);
+                    }
+                } else {
+                    output.insertAdjacentHTML("beforeend",
+                        `<p>투입하신 금액은 총 ${total_input_amount}인데, 음료 가격은 ${drink.price}여서 구매할 수 없습니다.</p>`);
+                }
+            } else {
+                output.insertAdjacentHTML("beforeend", `<p>선택하신 음료 ${drink.drinkName}이 재고가 없습니다.</p>`);
+            }
+            output.scrollTop = output.scrollHeight;
+        }
+    </script>
+</body>
+
+</html>

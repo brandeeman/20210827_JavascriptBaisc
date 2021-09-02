@@ -1,0 +1,71 @@
+<!-- 배열 안의 배열(이중 배열) 내용을 부르는 법 : arr2D[i][j] -->
+
+<!-- 문제. 배열안에 배열. for~loop -->
+<!-- 함수 -->
+<!-- 함수명 ~ printArray -->
+<!-- 파라미터 ~ 배열 -->
+<!-- 출력 ~ console.log -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [
+            [1, 2, 3, 4, 5],
+            [3, 12, 33, 24, 15],
+            [4, 7, 12, 3, 9],
+            [12, 32, 56, 23, 90],
+            [5, 9, 7, 21, 19],
+            [5, 9, 7, 21, 19]
+        ];
+
+        //*내가 만든 것
+        // for (var i = 0; i < 5; i++) {
+
+        //     // console.log(arr[i]);
+
+        //     var b = [];
+
+        //     b = arr[i];
+
+        //     for (var j = 0; j < 5; j++) {
+        //         console.log(b[j]);
+        //     }
+        // }
+
+        //*선생님이 만든 것
+        function printArray(arr2D) {
+            let len1 = arr2D.length; //요소의 갯수 6개
+
+            for (let i = 0; i < len1; i++) {
+                // 첫 번째 for : arr2D[0] //[1,2,3,4,5]
+
+                let arr1 = arr2D[i] //[1,2,3,4,5]
+
+                let len2 = arr1.length; //요소의 갯수 5개
+
+                for (let j = 0; j < len2; j++) {
+                    //arr2D[i][j];
+                    //[1,2,3,4,5][0];
+                    console.log(arr2D[i][j]);
+
+                    //arr1[0] //1
+                    //arr1[1] //2
+                    // [1,2,3,4,5][0]
+                    // console.log(arr1[j]);
+
+                }
+            }
+        }
+
+        printArray(arr);
+        
+    </script>
+</body>
+
+</html>
